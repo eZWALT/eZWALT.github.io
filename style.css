@@ -1,0 +1,180 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-weight: light;
+    font-family: arial, helvetica !important;
+}
+
+
+.desktop, body {
+    background: linear-gradient(45deg, #ff6ac1, #0fdbaf);
+    height: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .dock {
+    width: 100%;
+    position: fixed;
+    background: #c0c0c0;
+    height: 38px;
+    bottom: 0;
+    border-top: 2px solid #efefef;
+    padding: 3px;
+    margin: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; 
+}
+.dock-time{
+    border-top: 2px solid #666;
+    border-bottom: 2px solid white;
+    border-left: 2px solid #666;
+    border-right: 2px solid white;
+    float: right;
+    padding: 5px 15px 5px 35px;
+    font-size: 14px;
+    background: url("./images/AudioSpeakerIcon.png");
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: 5px center;
+
+}
+
+.start-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    line-height: 25px;
+    font-weight: bold;
+    padding-left: 31px;
+    padding-right: 7px;
+    height: 29px;
+    background-image: url("./images/LogoWindows95.png");
+    background-repeat: no-repeat;
+    background-size: 22px;
+    background-position: 5px center;
+    background-color: #c0c0c0;
+    border-top: 2px solid white;
+    border-right: 2px solid #222;
+    border-bottom: 2px solid #222;
+    border-left: 2px solid white;
+  }
+
+.start_btn.active {
+    border-top: 2px solid #222;
+    border-bottom: 2px solid #ffffff;
+    border-left: 2px solid #222;
+    border-right: 2px solid #ffffff;
+}
+
+.start_menu{
+    display: none;
+    position: absolute;
+    bottom: 38px;
+
+    background: #c0c0c0;
+    font-size: 14px;
+
+    border-top: 2px solid #ffffff;
+    border-bottom: 2px solid #222;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #222;
+
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+}
+
+.start-menu.open {
+    display: block;
+}
+
+.start-menu .title_container {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 37px;
+    height: 100%;
+    background: linear-gradient(#000184, #0f80cd);
+}
+
+.start-menu .title-container .title{
+    position: absolute;
+    transform: rotate(270deg);
+    color: #ffffff;
+    top: 430px;
+    left: -51px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.start-menu .title-container .title span{
+    font-weight: 100;
+}
+
+.start-menu hr {
+    margin: 0 4px 0 40px;
+}
+
+.start-menu ul{
+    margin: 0;
+    padding: 0;
+}
+
+.start-menu ul li{
+    padding: 18px 100px 18px 100px;
+    list-style: none;
+    background-repeat: no-repeat;
+    background-position: 48px center;
+    background-size: 33px;
+}
+
+.start-menu ul li:hover{
+    background-color: #000184;
+    color: #ffffff; 
+    cursor: pointer;
+}
+
+.start-menu ul li.windows-update{
+    background-image: url("./images/WorldWindowsIcon.png");
+}
+.start-menu ul li.programs{
+    background-image: url("./images/ProgramsIcon.png");
+}
+.start-menu ul li.favorites{
+    background-image: url("./images/FavoritesIcon.png");
+}
+.start-menu ul li.documents{
+    background-image: url("./images/DocumentsIcon.png");
+}
+.start-menu ul li.settings{
+    background-image: url("./images/SettingsIcon.png");
+}
+.start-menu ul li.find{
+    background-image: url("./images/FindIcon.png");
+}
+.start-menu ul li.help{
+    background-image: url("./images/HelpIcon.png");
+}
+.start-menu ul li.run{
+    background-image: url("./images/RunIcon.png");
+}
+.start-menu ul li.log-off{
+    background-image: url("./images/LogOffIcon.png");
+}
+.start-menu ul li.shut-down{
+    background-image: url("./images/ShutDownIcon.png");
+}
+
+.window-container{
+    text-align: center;
+    position: relative;
+}
+
+.window{
+
+}
