@@ -2,6 +2,7 @@
     box-sizing: border-box;
 }
 
+/* DESKTOP AND WALLPAPER*/
 body {
     font-weight: light;
     font-family: arial, helvetica !important;
@@ -16,7 +17,31 @@ body {
     overflow: hidden;
   }
 
-  .dock {
+/*DESKTOP ICONS*/
+.desktop-icons {
+    margin: 20px;
+    width: 100px;
+}
+
+.desktop-icons .icon {
+    display: block;
+    margin-bottom: 33px;
+}
+
+.desktop-icons img {
+    display: block;
+    width: 64px;
+    height: 64px;
+}
+
+.desktop-icons p {
+    color: rgba(0, 0, 0, 0.8);
+    text-align: left;
+    font-size: 16px;
+    
+}
+/* TASK DOCK AND START BUTTON*/
+.dock {
     width: 100%;
     position: fixed;
     background: #c0c0c0;
@@ -170,11 +195,41 @@ body {
     background-image: url("./images/ShutDownIcon.png");
 }
 
+
+/*WINDOW STUFF*/
 .window-container{
     text-align: center;
     position: relative;
 }
 
 .window{
+    border-top: 2px solid #ffffff;
+    border-bottom: 2px solid #222;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #222;
 
+    margin: 20px auto;
+    background: #c0c0c0;
+    display: inline-block;
+    position: relative;
+    bottom: 230px;
+}
+
+.window-title {
+  position: relative;
+  background: linear-gradient(90deg, #000184, #0f80cd);
+  padding: 4px 6px 5px;
+  color: white;
+  font-size: 15px;
+  margin-right: 2px;
+  text-align: left;
+}
+.window-title:hover {
+  cursor: move;
+}
+
+.window-body {
+  padding: 18px 90px 20px 100px;
+  font-size: 14px;
+  text-align: left;
 }

@@ -9,40 +9,65 @@
 </head>
 
 <body> 
+
+    <!-- DESKTOP & ICONS --> 
     <div class = "desktop">
         <div class = "desktop-icons">
 
-            <div class = "icon my-contact">
+            <div class = "icon my-contact" onclick = "showWindow('contactBox')">
                 <img src = "./images/IconMyContactMe.png" alt = "">
                 <p> Contact </p>
             </div>
 
-            <div class = "icon my-aboutme"> 
-                <img src = "./images/IconAboutMe.png" alt = "">
+            <div class = "icon my-aboutme" onclick = "showWindow('aboutMeBox')"> 
+                <img src = "./images/IconAboutMe.png"  alt = "">
                 <p> About me </p>
             </div>
 
-            <div class = "icon my-skills">
-                <img src = "./images/IconMySkills.png" alt = "">
+            <div class = "icon my-skills" onclick = "showWindow('skillsBox')">
+                <img src = "./images/IconMySkills.png"  alt = "">
                 <p> Skills </p>
             </div>
 
-            <div class = "icon my-projects" alt = ""> 
+            <div class = "icon my-projects" onclick = "showWindow('projectsBox')"> 
                 <img src = "./images/IconMyProjects.png" alt = "">
                 <p> Projects</p>
             </div>
 
-            <div class = "icon my-terminal">
-                <img src = "./images/IconMyTerminal.png" alt = "">
+            <div class = "icon my-certifications" onclick = "showWindow('certificationsBox')"> 
+                <img src = "./images/IconMyCertifications.png" alt = "">
+                <p> Certifications</p>
+            </div>
+
+            <div class = "icon my-terminal" onclick = "showWindow('terminalBox')">
+                <img src = "./images/IconMyTerminal.png"  alt = "">
                 <p> Terminal </p>
             </div>
+
         </div> 
     </div>
 
+    <!-- DOCK -->
     <div class = "dock">
-        <a class = "start-btn" href = "#0"> Start</a>
 
-        <div class = "dock-time"> 4.20AM </div>
+
+
+        <!-- CLOCK -->
+        <div class = "dock-time"> 17.30 </div>
+        
+        <!-- TASKBAR -->
+        <div class = "dock-taskar"> 
+            <div class = "taskbarWindow" id = "contactTask" onclick = "toggle('contactBox')" style = "display: none;"> Contact </div> 
+            <div class = "taskbarWindow" id = "aboutMeTask" onclick = "toggle('aboutMeBox')" style = "display: none;"> About Me </div>
+            <div class = "taskbarWindow" id = "skillsTask" onclick = "toggle('skillsBox')" style = "display: none;"> Skills </div>
+            <div class = "taskbarWindow" id = "projectsTask" onclick = "toggle('projectsBox')" style = "display: none;"> Projects</div>
+            <div class = "taskbarWindow" id = "certificationsTask" onclick = "toggle('certificationsBox')" style = "display: none;"> Certifications </div>
+            <div class = "taskbarWindow" id = "terminalTask" onclick = "toggle('terminalBox')" style = "display: none;"> Projects</div>
+            <div class = "taskbarWindow" id = "cvTask" onclick = "toggle('cvBox')" style = "display: none;"> CV </div>
+        </div>
+
+        <!-- START BUTTON -->
+        <a class = "start-btn" href = "#0"> Start</a>
 
         <div class = "start-menu">
             <div class = "title-container">
@@ -65,6 +90,7 @@
         </div>
     </div>
 
+    <!-- WEIRD WINDOW -->
    <div class = "window-container">
         <div class = "window">
             <div class = "window-title">
@@ -97,6 +123,82 @@
 
         </div>
    </div>
+
+   <!-- WINDOWS & BOXES -->
+   <div class = "mainWindow" id = "contactBox" style = "display: none;">
+        <div class = "topbar"> Contact </div>
+        <div class = "buttons"> 
+            <div class = "topbarButton" onclick = "minimise('contactBox')"> - </div>
+            <div class = "topbarButton" onclick = "hideWindow('contactBox')"> x </div>
+        </div>
+        <div class = "content"> 
+
+        </div>
+   </div>
+
+   <div class = "mainWindow" id = "aboutMeBox" style = "display: none;"> 
+        <div class = "topbar"> About Me </div>
+        <div class = "buttons">
+            <div class = "topbarButton" onclick = "minimise('aboutMeBox')"> - </div>
+            <div class = "topbarButton" onclick = "hideWindow('aboutMeBox')"> x </div>
+        </div>
+        <div class = "content"> 
+            
+        </div>
+   </div>
+
+   <div class = "mainWindow" id = "skillsBox" style = "display: none;"> 
+        <div class = "topbar"> Skills </div>
+        <div class = "buttons">
+            <div class = "topbarButton" onclick = "minimise('skillsBox')"> - </div>
+            <div class = "topbarButton" onclick = "hideWindow('skillsBox')"> x </div>
+        </div>
+        <div class = "content"> 
+        
+        </div>
+    </div>
+
+    <div class = "mainWindow" id = "projectsBox" style = "display: none;"> 
+        <div class = "topbar"> Project </div>
+        <div class = "buttons">
+            <div class = "topbarButton" onclick = "minimise('projectsBox')"> - </div>
+            <div class = "topbarButton" onclick = "hideWindow('projectsBox')"> x </div>
+        </div>
+        <div class = "content"> 
+        
+        </div>
+    </div>
+
+    <div class = "mainWindow" id = "certificationsBox" style = "display: none;"> 
+        <div class = "topbar"> Certifications </div>
+        <div class = "buttons">
+            <div class = "topbarButton" onclick = "minimise('certificationsBox')"> - </div>
+            <div class = "topbarButton" onclick = "hideWindow('certificationsBox')"> x </div>
+        </div>
+        <div class = "content"> 
+        
+        </div>
+    </div>
+
+    <div class = "mainWindow" id = "terminalBox" style = "display: none;"> 
+        <div class = "topbar"> Terminal </div>
+        <div class = "buttons">
+            <div class = "topbarButton" onclick = "minimise('terminalBox')"> - </div>
+            <div class = "topbarButton" onclick = "hideWindow('terminalBox')"> x </div>
+        </div>
+        <div class = "content"> 
+        
+        </div>
+    </div>
+
+    <div class = "mainWindow" id = "cvBox" style = "display: none;">
+        <div class = "topbar" id> </div>
+        <div class = "buttons">
+            <div class = "topbarButton" onclick = "minimise('cvBox')"> - </div>
+            <div class = "topbarButton" onclick = "hideWindow('cvBox')"> x </div>
+        </div>
+        <iframe id = "iframepdf" style = "width: 1280px; height: 720px;" src = "./docs/CV_eng.pdf"></iframe>
+    </div>
     
 
 </body>
