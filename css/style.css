@@ -1,0 +1,571 @@
+body {
+	background: rgb(146, 246, 251);
+	/* background: linear-gradient(180deg, rgba(177,255,255,1) 0%, rgba(145,255,149,1) 70%, rgba(176,255,251,1) 100%); */
+	max-width: 100%;
+	overflow-x: hidden;
+    font-family: "Press Start 2P", 'Courier New', Courier, monospace;
+	font-size: 16px;
+	font-weight: 200;
+	/* overflow: hidden; */
+}
+
+a {
+	text-decoration: none;
+}
+
+.windowslink {	
+	color: #0907ec;
+	padding: 0.2rem 1rem;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;	
+}
+
+
+.windowslink:hover {
+	cursor: pointer;
+}
+
+.windowslink:active {
+	color: red;
+	display: inline-block;	
+}
+
+.windowslink:visited {
+	cursor: pointer;
+	color: #572191;
+}
+
+.the_background {
+	display: block;
+	position: absolute;
+	top:0px;
+	right:0px;
+	bottom:0px;
+	left:0px;
+	max-width: 100vw;
+	max-height: 100%;
+	margin: 0px;
+    background: linear-gradient(45deg, #ff6ac1, #0fdbaf);
+}
+
+.mainbox {
+	display: none;
+	position: absolute;
+	background-color: #EEF2F5;
+	padding: 4px;
+	font-size: 0.8vw;
+	border-bottom: solid 2px #808080;
+	border-right: solid 2px #808080;
+	border-top: solid 2px #FEFFFF;
+	border-left: solid 2px #FEFFFF;
+	box-shadow: 2px 2px #010101;
+	max-width: 70%;
+	min-width: 20%;
+	z-index: 1;
+}
+
+.terminal_box {
+	display: none;
+	position: absolute;
+	background-color: #171421;
+	padding: 4px;
+	border-bottom: solid 2px #5E5C64;
+	border-right: solid 2px #5E5C64;
+	border-top: solid 2px #5E5C64;
+	border-left: solid 2px #5E5C64;
+	box-shadow: 2px 2px #010101;
+	max-width: 50%;
+	min-height: 40%;
+	min-width: 40%;
+	max-lines: 20;
+	color: white;
+	font-size: 1.1rem;
+    flex-direction: column;
+	flex-shrink: 1;
+    flex-grow: 1;
+	z-index: 1;
+}
+
+.cv_box {
+	display: block;
+	position: absolute;
+	background-color: #EEF2F5;
+	padding: 4px;
+	border-bottom: solid 2px #808080;
+	border-right: solid 2px #808080;
+	border-top: solid 2px #FEFFFF;
+	border-left: solid 2px #FEFFFF;
+	box-shadow: 2px 2px #010101;
+	min-width: 40%;
+	min-height: 40%;
+	z-index: 1;
+}
+
+div.terminal_box a:link {
+	color: white;
+	text-decoration: underline;
+}
+
+div.terminal_box a:visited {
+	color: white;
+	text-decoration: underline;
+}
+
+div.terminal_box a:active {
+	color: #0907ec;
+	text-decoration: underline;
+}
+
+.gamebox {
+	display: none;
+	position: absolute;
+	background-color: #171421;
+	padding: 4px;
+	border-bottom: solid 2px #5E5C64;
+	border-right: solid 2px #5E5C64;
+	border-top: solid 2px #5E5C64;
+	border-left: solid 2px #5E5C64;
+	box-shadow: 2px 2px #010101;
+	width: fit-content;
+	height: fit-content;
+}
+
+.terminalcontent {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    padding: 2ex;
+    overflow-x: hidden;
+    overflow-y: scroll;
+	max-height: 30rem;
+	font-size: 0.8vw;
+}
+
+.terminalcontent h1 {
+	text-shadow: red;
+}
+
+.content {
+	padding: 10px;
+	font-size: 0.7vw;
+}
+
+.topbar {
+	display: flex;
+	flex-direction: row;
+	background: rgb(106, 166, 240);
+	padding: 5px;
+	font-size: 1.5rem;
+	color: white;
+}
+
+.terminaltopbar {
+	display: flex;
+	flex-direction: row;
+	background: #2C2C2C;
+	padding: 5px;
+	font-size: 1.7rem;
+	color: white;
+}
+
+.buttons {
+	margin-left: auto;
+	display: flex;
+	flex-direction: row;
+	cursor: pointer;
+}
+
+.topbarButton {    
+	font-family: "Press Start 2P", 'Courier New', Courier, monospace;
+	background-color: #EEF2F5;
+	padding: 4px;
+	border-bottom: solid 2px #808080;
+	border-right: solid 2px #808080;
+	border-top: solid 2px #FEFFFF;
+	border-left: solid 2px #FEFFFF;
+	box-shadow: 2px 2px #010101;
+	width: 16px;
+	font-size: 1rem;
+	color: black;
+}
+
+.terminaltopbarButton {
+	background-color: #2C2C2C;
+	padding: 4px;
+	border-bottom: solid 2px #808080;
+	border-right: solid 2px #808080;
+	border-top: solid 1px #FEFFFF;
+	border-left: solid 1px #FEFFFF;
+	box-shadow: 2px 2px #010101;
+	width: 16px;
+	font-size: 1rem;
+	color: whitesmoke;
+}
+
+.icon {
+	display: block;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+
+#shutdownMessage {
+	display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Add a semi-transparent background overlay if desired */
+    z-index: 9999; /* Ensure it's on top of other content */
+}
+
+#shutdownMessage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the entire div while maintaining aspect ratio */
+}
+
+.taskbar {
+	position: absolute;
+	background-color: #EEF2F5;
+	border-bottom: solid 2px #808080;
+	border-right: solid 2px #808080;
+	border-top: solid 2px #FEFFFF;
+	border-left: solid 2px #FEFFFF;
+	bottom: 0;
+	left: 0;
+	width: 99.8%;
+	height: 2vw;
+	display: flex;
+	flex-direction: row;
+	font-size: 1vw;
+}
+
+.taskbar img {
+	height: 32px;
+	width: 32px;
+}
+
+.startButton {
+	border-bottom: solid 2px #808080;
+	border-right: solid 2px #808080;
+	border-top: solid 2px #FEFFFF;
+	border-left: solid 2px #FEFFFF;
+	padding: 4px;
+	cursor: pointer;
+	font-size: 1vw;
+}
+
+.startButton img {
+	height: 1.5vw;
+	width: auto;
+}
+
+.startmenu {
+	display: none;
+	background-color: #EEF2F5;
+	height: 67%;
+	width: 20%;
+	bottom: 0;
+	left: 0;
+	position: absolute;
+} 
+
+
+.startmenu ul{
+    padding: 0;
+	margin-top: -5px; /*Just to avoid useless startmenu space that is kinda ugly*/
+}
+
+.startmenuItem {
+	background-color: #EEF2F5;
+	width: auto;
+	margin-bottom: 3px;
+	margin-top: 3px;
+	line-height: 3vw;
+	border-bottom: solid 2px #808080;
+	border-right: solid 2px #808080;
+	border-top: solid 2px #FEFFFF;
+	border-left: solid 2px #FEFFFF;
+	align-items: center;
+	padding-left: 4px;
+	font-size: 1vw;
+}
+
+.startmenuItem img{
+	width: 32px;
+	height: 32px;
+
+	margin-left: 10px;
+}
+
+.startmenuTitle {
+	background: linear-gradient(#000184, #0f80cd);
+	color: white;
+
+	width: auto;
+	margin-bottom: 3px;
+	margin-top: 3px;
+	line-height: 3vw;
+	border-bottom: solid 2px #808080;
+	border-right: solid 2px #808080;
+	border-top: solid 2px #FEFFFF;
+	border-left: solid 2px #FEFFFF;
+	align-items: center;
+	padding-left: 4px;
+	font-size: 1vw;
+}
+
+
+.startmenuItem:hover {
+	background-color: rgb(181, 181, 181);
+}
+
+.taskbarWindow {
+	display: none;
+	background-color: #ffffff;
+	border-bottom: solid 2px #808080;
+	border-right: solid 2px #808080;
+	border-top: solid 2px #FEFFFF;
+	border-left: solid 2px #FEFFFF;
+	padding: 4px;
+	cursor: pointer;
+}
+
+.clock {
+	border-bottom: solid 2px #808080;
+	border-right: solid 2px #808080;
+	border-top: solid 2px #FEFFFF;
+	border-left: solid 2px #FEFFFF;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-left: auto;
+}
+
+.desktop {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/* width: -moz-fit-content; */
+	width: fit-content;
+	margin-left: 0px;
+}
+
+.desktopicon {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 15px;
+	font-size: 10px;
+	overflow-wrap: auto;
+	cursor: pointer;
+}
+
+.desktopicon img {
+	width: 64px;
+    height: 64px;
+	margin-bottom: 10px; /*Separte text down from image*/
+	
+}
+
+.windowContainer {
+	background: rgb(175,211,255);
+	background: linear-gradient(90deg, rgba(175,211,255,1) 0%, rgba(255,255,255,1) 16%);
+	border-bottom: solid 2px #c0c0c0;
+	border-right: solid 2px #c0c0c0;
+	margin: 4px;
+}
+
+.properties {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.properties img {
+	width: 20%;
+	padding: 20px;
+}
+
+.txt {
+	padding: 20px;
+}
+
+.mobile_device_380 {
+	display: none;
+}
+
+.mobile_device_480 {
+	display: none;
+}
+
+@media screen and (max-width: 380px){
+	.mobile_device_380 {display: none;}   
+	.mobile_device_480 {display: block;}           
+	.desktop_device {display: none;}
+
+	body {
+		background: rgb(146, 246, 251);
+		/* background: linear-gradient(180deg, rgba(177,255,255,1) 0%, rgba(145,255,149,1) 70%, rgba(176,255,251,1) 100%); */
+		background: gradien;
+		max-width: 100%;
+		overflow-x: auto;
+		font-family: "Press Start 2P", 'Courier New', Courier, monospace;
+		font-weight: 400;
+		/* overflow: hidden; */
+	}
+}
+
+@media screen and (max-width: 480px){
+	.mobile_device_380 {display: none;}   
+	.mobile_device_480 {display: block;}           
+	.desktop_device {display: none;}
+
+	body {
+		background: rgb(146, 246, 251);
+		/* background: linear-gradient(180deg, rgba(177,255,255,1) 0%, rgba(145,255,149,1) 70%, rgba(176,255,251,1) 100%); */
+		background: gradien;
+		max-width: 100%;
+		overflow-x: auto;
+		font-family: "Press Start 2P", 'Courier New', Courier, monospace;
+		font-weight: 400;
+		/* overflow: hidden; */
+	}
+
+	.mainbox {
+		display: block;
+		position: relative;
+		margin: 10px;
+		left: 3%;
+		min-width: 80%;
+		font-size: 10vw;
+	}
+
+	.topbar {
+		display: flex;
+		flex-direction: row;
+		background: rgb(106, 166, 240);
+		font-size: 0%;
+		color: white;
+	}
+}
+
+@media screen and (max-width: 768px){
+
+	.mainbox {
+		display: block;
+		position: relative;
+		margin: 20px;
+		left: 2%;
+		max-width: 60%;
+		font-size: 3.2vw;
+	}
+
+	.topbar {
+		font-size: 3vw;
+	}
+
+	.desktopicon {
+		display: none;
+	}
+
+	.taskbar {
+		display: none;
+	}
+
+	.topbarButton {
+		width: 2vw;
+		height: 2vw;
+		font-size: 2vw;
+	}
+
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+
+  /*experimental stuff for error*/
+  /*
+  body,
+  html,
+  .flex-full-justify,
+  .overlay {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  
+  body {
+    background-color: #00a;
+    color: #f1f1f1;
+  }
+  
+  .overlay {
+    position:absolute;
+    z-index:2;
+    pointer-events: none;
+
+    &.overlay--vignette {
+        background-image: radial-gradient(ellipse at center, rgba(0,0,0,0) 50%, rgba(0,0,0,0.25) 100%);
+    }
+
+    &.overlay--scanline {
+        background-image: linear-gradient(0deg, rgba(0,0,0,0) 25%, rgba(0,0,0,0.33) 25%, rgba(0,0,0,0.33) 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 75%, rgba(0,0,0,0.33) 75%, rgba(0,0,0,0.33) 100%);
+        background-size: 4px 4px;
+    }
+  }
+  
+  .flex-full-justify {
+    padding:3rem 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    > .flex-inner {
+      max-width: 40rem;
+    }
+  }
+  
+  h1 {
+    background-color: silver;
+    color: #00a;
+    padding: 0 1rem;
+    font-size: 1rem;
+    display: inline-block;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding-left: 1.5em;
+    
+    > li {
+      position: relative;
+      
+      &:before {
+        font-family: "Perfect DOS";
+        color: #f1f1f1;
+        content: "*";
+        position: absolute;
+        left: -1.5em;
+        font-size:1rem;
+      }
+    }
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .blink {
+    animation: blink 1s steps(1) infinite;
+  }
+  
+  @keyframes blink {
+    66% {
+      opacity: 0;
+    }
+  }
+  */

@@ -1,204 +1,417 @@
 <!DOCTYPE html>
-<head>
-    <meta charset = "utf-8">
+<html data-lt-installed="true"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-    <title> Walter's Place </title>
-    <link rel="stylesheet" href = "./style.css">
-    <script src="./index.js"></script>
-
+	<title>Walter's Place</title>
+	<!-- <link rel="icon" href="images/tablogo.png"> -->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com/">
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+	<link href="https://db.onlinewebfonts.com/c/47d5fd8c3738de46ef0b3fe3f68c289a?family=Perfect+DOS+VGA+437" rel="stylesheet">
+	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="js/sl.js"></script>
 </head>
 
-<body> 
 
-    <!-- DESKTOP & ICONS --> 
-    <div class = "desktop">
-        <div class = "desktop-icons">
+<body>
 
-            <div class = "icon my-contact" onclick = "showWindow('contactBox')">
-                <img src = "./images/IconMyContactMe.png" alt = "">
-                <p> Contact </p>
-            </div>
+	<div class="the_background">
+		
+		<div class="desktop_device">
 
-            <div class = "icon my-aboutme" onclick = "showWindow('aboutMeBox')"> 
-                <img src = "./images/IconAboutMe.png"  alt = "">
-                <p> About me </p>
-            </div>
+			<!-- CONTAINERS OF EACH APPLICATION (BOX) -->
+			<div class="mainbox" id="about_me_box" style="display: none;">
+				<div class="topbar" id="about_me_boxheader">About me 
+				<div class="buttons"><div class="topbarButton" onclick="minimise('about_me_box')">_</div>
+				<div class="topbarButton">□</div>
+				<div class="topbarButton" onclick="hideWindow('about_me_box')">X</div></div></div>	
+				
+				<div class="content">
+					<div class="properties">
+					<img src="images/photoOfMe.jpg" style="width:30%; height: 30%;">
+						<div class="txt">
+							Hello World:<br>
+							<br>
+							&nbsp;++Walter J. Troiani Vargas <br> 
+							&nbsp;++02/09/2002 <br> 
+							&nbsp;++Half spanish half italian <br>
+							<br>
+							Career:<br>
+							<br>
+							&nbsp;++Computer & Data Scientist <br>
+							&nbsp;++Currently enrolled on my last year of Computer Science & Engineering at Polythecnic University of Catalonia (Barcelona) <br>
+							&nbsp;++Working as a Data Scientist DevOps at MANGO<br>
+							<br>
+							My interests: <br>
+							<br>
+							&nbsp;++I'm a tech enthusiast and my current interests are Compilers, Data Science, Machine Learning, Stocks Market , Hackathons, Cloud Computing and Maths. <br>
+						    &nbsp;++On my free time I love reading, playing the piano, lifting heavy weights, calisthenics, hiking, and most importantly, learning something new every day. <br>
+							<br>
+							<br>
+							Thanks for checking out my place!
+						</div>
+					</div>
+				</div>
 
-            <div class = "icon my-skills" onclick = "showWindow('skillsBox')">
-                <img src = "./images/IconMySkills.png"  alt = "">
-                <p> Skills </p>
-            </div>
+			</div>
 
-            <div class = "icon my-projects" onclick = "showWindow('projectsBox')"> 
-                <img src = "./images/IconMyProjects.png" alt = "">
-                <p> Projects</p>
-            </div>
+			<div class="mainbox" id="skills_box" style="display: none;">
+				<div class="topbar" id="skills_boxheader">Skills
+				<div class="buttons"><div class="topbarButton" onclick="minimise('skills_box')">_</div>
+				<div class="topbarButton" >□</div>
+				<div class="topbarButton" onclick="hideWindow('skills_box')">X</div></div></div>	
+				
+				<div class="content">
+					Programming Languages:<br>
+					• C++ <br>
+					• C   <br>
+					• Python <br>
+					• Java <br>
+					• R <br>
+					• Kotlin <br>
+					• Prolog <br>
+					• SQL <br>
+					• Haskell <br>
+					• Scala <br>
+					• Javascript <br>
+					<br>
+					Assembly Languages:<br>
+					• MIPS<br>
+					• ARM <br>
+					• x86 <br>
+					• PIC18F45K22 instruction set <br>
+					<br>
+					Databases:<br>
+					• MongoDB<br>
+					• S3 & DynamoDB <br>
+					• PostgreSQL <br>
+					• Snowflake <br>
+					<br>
+					Useful Libraries:<br>
+					• LLVM & OMP <br>
+					• OpenGL <br>
+					• ANTLR <br>
+					• CUDA <br>
+					• Machine learning: Pytorch , TensorFlow, LightGBM, <br>
+					&nbsp; XGBoost, Scikit-learn, Prophet, Llama2 ...
+					<br>
+					<br>
+					DevOps Tech stack:<br>
+					• Git & BitBucket <br>
+					• Airflow <br>
+					• Terraform <br>
+					• Docker <br>
+					• Jenkins <br>
+					• Kubernetes <br>
+					• Terragrunt<br>
+					• AWS: S3, IAM, API gateway, EC2, ECS, Lambda...<br>
+					• Jira & Confluence <br>
+					<br>
+					Other Tech stack:<br>
+					• Linux <br>
+					• HTML & CSS<br>
+					• Notebooks: Jupyter / Colab / Databricks <br>
+					• Apache Pyspark <br>
+					<br> <br>
+				</div>
 
-            <div class = "icon my-certifications" onclick = "showWindow('certificationsBox')"> 
-                <img src = "./images/IconMyCertifications.png" alt = "">
-                <p> Certifications</p>
-            </div>
+			</div>
 
-            <div class = "icon my-terminal" onclick = "showWindow('terminalBox')">
-                <img src = "./images/IconMyTerminal.png"  alt = "">
-                <p> Terminal </p>
-            </div>
+			<div class="mainbox" id="certification_box"style="display: none;">
+				<div class="topbar" id="certification_boxheader"> Certifications & Licenses
+				<div class="buttons"><div class="topbarButton" onclick="minimise('certification_box')">_</div>
+				<div class="topbarButton" >□</div>
+				<div class="topbarButton" onclick="hideWindow('certification_box')">X</div></div></div>	
+				
+				<div class="content">
+					<a class="windowslink" onclick="showWindow('certification_box_mentoria')" style="padding-left: 0%;"> • Coaching techniques for academic mentoring by UPC </a> <br> <br>
+					<a class="windowslink" onclick="showWindow('certification_box_ML')" style="padding-left: 0%;"> • Machine learning Specialization by Coursera </a> <br> <br>
+					• Driving License (Work in progress EDC 12/2023) <br> <br>
+					• English CAE C1 certification (Work in progress EDC 4/2023) <br> <br>
+					• AWS cloud practitioner (Work in progress EDC 6/2024) <br> <br>
+				</div>
+			</div>
 
-        </div> 
-    </div>
+			<div class="mainbox" id="projects_box" style="display: none;">
+				<div class="topbar" id="projects_boxheader">Projects
+				<div class="buttons"><div class="topbarButton" onclick="minimise('projects_box')">_</div>
+				<div class="topbarButton" >□</div>
+				<div class="topbarButton" onclick="hideWindow('projects_box')">X</div></div></div>	
 
-    <!-- DOCK -->
-    <div class = "dock">
+				
+				<div class="content">
+					• <strong>Loopback: The Game</strong> &nbsp; <a href="https://github.com/eZWALT/Loopback-TheGAME"> <u>Github</u> </a> <br>
+					&nbsp; A 2D "Sudoku"-like game made in HackUPC2022 <br> <br>
 
+					• <strong>Falcon Explorer</strong> &nbsp; <a href="https://github.com/eZWALT/UPC-PROP"> <u>Github</u> </a> <br>
+					&nbsp;  A file explorer program with a file editor on it (Course Project 2022)  <br> <br>
 
+					• <strong>ASL front-end & Middle-end compiler</strong> &nbsp; <a href="https://github.com/eZWALT/UPC-CL/tree/main/practica"> <u>Github</u> </a> <br>
+					&nbsp;  A front & middle end compiler for the custom language ASL (Compilers subject project 2023) <br> <br> <br>
 
-        <!-- CLOCK -->
-        <div class = "dock-time"> 17.30 </div>
-        
-        <!-- TASKBAR -->
-        <div class = "dock-taskar"> 
-            <div class = "taskbarWindow" id = "contactTask" onclick = "toggle('contactBox')" style = "display: none;"> Contact </div> 
-            <div class = "taskbarWindow" id = "aboutMeTask" onclick = "toggle('aboutMeBox')" style = "display: none;"> About Me </div>
-            <div class = "taskbarWindow" id = "skillsTask" onclick = "toggle('skillsBox')" style = "display: none;"> Skills </div>
-            <div class = "taskbarWindow" id = "projectsTask" onclick = "toggle('projectsBox')" style = "display: none;"> Projects</div>
-            <div class = "taskbarWindow" id = "certificationsTask" onclick = "toggle('certificationsBox')" style = "display: none;"> Certifications </div>
-            <div class = "taskbarWindow" id = "terminalTask" onclick = "toggle('terminalBox')" style = "display: none;"> Projects</div>
-            <div class = "taskbarWindow" id = "cvTask" onclick = "toggle('cvBox')" style = "display: none;"> CV </div>
-        </div>
+					I've taken part in multiple hackathons , such as HackUPC (Barcelona, Spain) both 2022 & 2023. I <br>
+					will have the pleasure of taking part in the spectacular Junction 2023 (Helsinki, Finland) <br> <br> <br> 
 
-        <!-- START BUTTON -->
-        <a class = "start-btn" href = "#0"> Start</a>
+					On the incoming months I have some ideas i want to develop on my free time: Building my <br>
+					own functional , language compiler from scratch, write a smartphone-friendly interpretable <br>
+					language, develop a robust calorie tracker application with dashboards on kotlin using <br>
+					machine learning algorithms, a simple machine learning estimator for monthly expenses <br>
+					and finally a web scraping project I've been working on to get a simple but powerful <br>
+					dashboard and anlysis of best jobs for a given location, job type and personal CV. <br> <br> <br>
 
-        <div class = "start-menu">
-            <div class = "title-container">
-                <div class = "title"> Windows <span> 98</span></div>
-            </div>
-            <ul> 
-                <li class = "windows-update"> Windows Update</li>
-                <hr/>
-                <li class = "programs"> Programs </li>
-                <li class = "favorites"> Favorites </li>
-                <li class = "documents"> Documents </li>
-                <li class = "settings"> Settings </li>
-                <li class = "find"> Find </li>
-                <li class = "help"> Help </li>
-                <li class = "run"> Run </li>
-                <hr/>
-                <li class = "log-off ok">Log Off</li>
-                <li class = "shut-down ok"> Shut Down </li>
-            </ul>
-        </div>
-    </div>
+					More project incoming...
 
-    <!-- WEIRD WINDOW -->
-   <div class = "window-container">
-        <div class = "window">
-            <div class = "window-title">
-                Shut Down Windows
-                <div classs = "btn-close close>"> X</div>
-            </div>
+				</div>
 
-            <div class = "window-body"> 
-                <p> What do you want the computer to do?</p>
-                <div>
-                    <input id = "option1" type = "radio" name = "field" value = "option">
-                    <label for= "option1"><span><span></span></span>Stand By</label>
+			</div>
 
-                    <input id = "option2" type = "radio" name = "field" value = "option">
-                    <label for= "option1"><span><span></span></span>Shut Down</label>
+			<div class="mainbox" id="contact_me_box"style="display: none;">
+				<div class="topbar" id="contact_me_boxheader">Contact
+				<div class="buttons"><div class="topbarButton" onclick="minimise('contact_me_box')">_</div>
+				<div class="topbarButton" >□</div>
+				<div class="topbarButton" onclick="hideWindow('contact_me_box')">X</div></div></div>	
+				
+				<div class="content">
+					<div class="properties">
+						<img src="images/ComputerAnimation.gif" style="width: 15%;height: 15%;">
+						
+						<div class="txt" style="margin-right: -4px;">
+							<a href="mailto:waltertv02@gmail.com"> waltertv02@gmail.com </a> <br>
+							<a href="https://www.linkedin.com/in/walterjtv/"> Linkedin Profile </a> <br>
+							<a href="https://github.com/miquelt9"> GitHub Activity </a> <br>
+							<a class="windowslink" onclick="showWindow('cv_box')" style="padding-left: 0%;">Check my CV!</a>
+						</div>
 
-                    <input id="option3" type="radio" name="field" value="option">
-                    <label for="option3"><span><span></span></span>Restart</label><br>
+					</div>
+				</div>
+			</div>
 
-                    <input id="option4" type="radio" name="field" value="option">
-                    <label for="option4"><span><span></span></span>Restart in MS-DOS mode</label><br>                    
-                </div>
-            </div>
+			<div class="terminal_box" id="terminal_box">
+				<div class="terminaltopbar" id="terminal_boxheader">>.
+				<div class="buttons"><div class="terminaltopbarButton" onclick="minimise('terminal_box')">_</div>
+				<div class="terminaltopbarButton">□</div>
+				<div class="terminaltopbarButton" onclick="hideWindow('terminal_box')">X</div></div></div>	
+				
+				<div class="terminalcontent" id="terminalcontent">
+					<h1>MS-DOS</h1>
+					<p>Welcome to my place. Here you can play around with the Linux command line to get some information about myself</p>
+					<p></p>
+					<noscript>
+						<p>This website requires javascript to function.</p>
+					</noscript>
+					<p>
+						You can start by trying the following commands:
+					</p>
+					<ul>
+						<li><a href="#" class="text-link" data-text="help" tabindex="-1">help</a></li>
+						<li><a href="#" class="text-link" data-text="cat email" tabindex="-1">cat email</a></li>
+						<li><a href="#" class="text-link" data-text="cd github" tabindex="-1">cd github</a></li>
+						<li><a href="#" class="text-link" data-text="cd github" tabindex="-1">cd cv</a></li>
 
-            <div class="window-button-row">
-                <a class="btn primary ok" href="">OK</a>
-                <a class="btn cancel" href="">Cancel</a>
-                <a class="btn" href="">Help</a>
-            </div>
+					</ul>
+					<pre id="term-contents">~$ <span class="cursor"></span></pre>
+				</div>
 
-        </div>
-   </div>
+			</div>
 
-   <!-- WINDOWS & BOXES -->
-   <div class = "mainWindow" id = "contactBox" style = "display: none;">
-        <div class = "topbar"> Contact </div>
-        <div class = "buttons"> 
-            <div class = "topbarButton" onclick = "minimise('contactBox')"> - </div>
-            <div class = "topbarButton" onclick = "hideWindow('contactBox')"> x </div>
-        </div>
-        <div class = "content"> 
+			<script type="application/javascript" src="js/terminal_script.js"></script>
 
-        </div>
-   </div>
+			<div class="cv_box" id="cv_box"style="display: none;">
+				<div class="topbar" id="cv_boxheader">&nbsp;CV&VeryThinSpace;📄
+				<div class="buttons"><div class="topbarButton" onclick="minimise('cv_box')">_</div>
+				<div class="topbarButton">□</div>
+				<div class="topbarButton" onclick="hideWindow('cv_box')">X</div></div></div>	
+				<iframe id="iframepdf" style="width: 1280px; height: 780px" src="./docs/cv.pdf"></iframe>
+			</div>
 
-   <div class = "mainWindow" id = "aboutMeBox" style = "display: none;"> 
-        <div class = "topbar"> About Me </div>
-        <div class = "buttons">
-            <div class = "topbarButton" onclick = "minimise('aboutMeBox')"> - </div>
-            <div class = "topbarButton" onclick = "hideWindow('aboutMeBox')"> x </div>
-        </div>
-        <div class = "content"> 
-            
-        </div>
-   </div>
+			<div class="cv_box" id="certification_box_mentoria"style="display: none;">
+				<div class="topbar" id="cert_mentoria_header">&nbsp;Certification&VeryThinSpace;📄
+				<div class="buttons"><div class="topbarButton" onclick="minimise('certification_box_mentoria')">_</div>
+				<div class="topbarButton">□</div>
+				<div class="topbarButton" onclick="hideWindow('certification_box_mentoria')">X</div></div></div>	
+				<iframe id="iframepdf" style="width: 1280px; height: 780px" src="./docs/cert_mentoria.pdf"></iframe>
+			</div>
 
-   <div class = "mainWindow" id = "skillsBox" style = "display: none;"> 
-        <div class = "topbar"> Skills </div>
-        <div class = "buttons">
-            <div class = "topbarButton" onclick = "minimise('skillsBox')"> - </div>
-            <div class = "topbarButton" onclick = "hideWindow('skillsBox')"> x </div>
-        </div>
-        <div class = "content"> 
-        
-        </div>
-    </div>
+			<div class="cv_box" id="certification_box_ML"style="display: none;">
+				<div class="topbar" id="cert_ml_header">&nbsp;Certification&VeryThinSpace;📄
+				<div class="buttons"><div class="topbarButton" onclick="minimise('certification_box_ML')">_</div>
+				<div class="topbarButton">□</div>
+				<div class="topbarButton" onclick="hideWindow('certification_box_ML')">X</div></div></div>	
+				<iframe id="iframepdf" style="width: 1280px; height: 780px" src="./docs/cert_ml.pdf"></iframe>
+			</div>
 
-    <div class = "mainWindow" id = "projectsBox" style = "display: none;"> 
-        <div class = "topbar"> Project </div>
-        <div class = "buttons">
-            <div class = "topbarButton" onclick = "minimise('projectsBox')"> - </div>
-            <div class = "topbarButton" onclick = "hideWindow('projectsBox')"> x </div>
-        </div>
-        <div class = "content"> 
-        
-        </div>
-    </div>
+			<!-- DESKTOP & ICONS -->
+			<!-- FALTA CERTIFICATIONS BOX-->
 
-    <div class = "mainWindow" id = "certificationsBox" style = "display: none;"> 
-        <div class = "topbar"> Certifications </div>
-        <div class = "buttons">
-            <div class = "topbarButton" onclick = "minimise('certificationsBox')"> - </div>
-            <div class = "topbarButton" onclick = "hideWindow('certificationsBox')"> x </div>
-        </div>
-        <div class = "content"> 
-        
-        </div>
-    </div>
+			<div class="desktop">
+				<div class="desktopicon" id="aboutme" onclick="showWindow('about_me_box')"><img src="images/IconMyAboutMe.png">About me</div>
+				<div class="desktopicon" id="skills" onclick="showWindow('skills_box')"><img src="images/IconMySkills.png">Skills</div>
+				<div class="desktopicon" id="certifications" onclick="showWindow('certification_box')"><img src="images/IconMyCertifications.png">Certifications <br> & Licenses</div>
+				<div class="desktopicon" id="projects" onclick="showWindow('projects_box')"><img src="images/IconMyProjects.png">Projects</div>
+				<div class="desktopicon" id="contactme" onclick="showWindow('contact_me_box')"><img src="images/IconMyContactMe.png">Contact</div>
+				<div class="desktopicon" id="terminal" onclick="showWindow('terminal_box')"><img src="images/IconMyTerminal.png">Terminal</div>
+			</div>
+			
+			<!-- START MENU -->
+			<div class="startmenu" id="startbutton" style="display: none;">
 
-    <div class = "mainWindow" id = "terminalBox" style = "display: none;"> 
-        <div class = "topbar"> Terminal </div>
-        <div class = "buttons">
-            <div class = "topbarButton" onclick = "minimise('terminalBox')"> - </div>
-            <div class = "topbarButton" onclick = "hideWindow('terminalBox')"> x </div>
-        </div>
-        <div class = "content"> 
-        
-        </div>
-    </div>
+				<ul>
 
-    <div class = "mainWindow" id = "cvBox" style = "display: none;">
-        <div class = "topbar" id> </div>
-        <div class = "buttons">
-            <div class = "topbarButton" onclick = "minimise('cvBox')"> - </div>
-            <div class = "topbarButton" onclick = "hideWindow('cvBox')"> x </div>
-        </div>
-        <iframe id = "iframepdf" style = "width: 1280px; height: 720px;" src = "./docs/CV_eng.pdf"></iframe>
-    </div>
-    
+					<li class="startmenuTitle" id="title">
+						&MediumSpace;&MediumSpace; Windows 2002
+						<img src="images/LogoWindows95.png" style="width: 64px; height: 64px; margin-bottom: -20px; margin-left: 10px;">
+					</li>
 
-</body>
+					<li class="startmenuItem" id="documents" onclick="showWindow('certification_box')">
+						<img src="images/DocumentsIcon.png">
+						&MediumSpace;&MediumSpace; Documents
+					</li>
+
+					<li class="startmenuItem" id="settings" onclick="showWindow('skills_box')">
+						<img src="images/WindowsUpdateIcon.png">
+						&MediumSpace;&MediumSpace; Settings
+					</li>
+
+					<li class="startmenuItem" id="programs" onclick="showWindow('projects_box')">
+						<img src="images/ProgramsIcon.png">
+						&MediumSpace;&MediumSpace; Programs
+					</li>
+
+					<li class="startmenuItem" id="run" onclick="showWindow('terminal_box')">
+						<img src="images/RunIcon.png">
+						&MediumSpace;&MediumSpace; Run
+					</li>
+
+					<li class="startmenuItem" id="run" onclick="showWindow('about_me_box')">
+						<img src="images/FavoritesIcon.png">
+						&MediumSpace;&MediumSpace; Favorites
+					</li>
+
+					<li class="startmenuItem" id="help" onclick="showWindow('contact_me_box')">
+						<img src="images/HelpIcon.png">
+						&MediumSpace;&MediumSpace; Help
+					</li>
+					
+					<hr> 
+					
+					<li class="startmenuItem" id="windowsupdate" onclick="updateComputer()">
+						<img src="images/WorldWindowsIcon.png">
+						&MediumSpace;&MediumSpace; Update
+					</li>
+
+					<li class="startmenuItem" id="shutdown" onclick="shutDownComputer()"> 
+						<img src="images/ShutDownIcon.png">
+						&MediumSpace;&MediumSpace; Shut Down
+					</li>
+
+					<!-- FIND BAR TO IMPLEMENT -->
+				</ul>
+			</div>
+			
+			<!-- TASKBAR -->
+			<div class="taskbar" id="taskbar">
+				<div class="startButton" onclick="startMenu()" id="startmenu"> <img src="images/LogoWindows95.png"> Start </div>
+				<div class="taskbarWindow" id="about_me_boxTaskbar" onclick="toggle('about_me_box')" style="display: none;">About Me</div>
+				<div class="taskbarWindow" id="skills_boxTaskbar" onclick="toggle('skills_box')" style="display: none;">Skills</div>
+				<div class="taskbarWindow" id="projects_boxTaskbar" onclick="toggle('projects_box')" style="display: none;">Projects</div>
+				<div class="taskbarWindow" id="certification_boxTaskbar" onclick="toggle('certification_box')" style="display: none;">Certifications...</div>
+				<div class="taskbarWindow" id="contact_me_boxTaskbar" onclick="toggle('contact_me_box')">Contact</div>
+				<div class="taskbarWindow" id="terminal_boxTaskbar" onclick="toggle('terminal_box')">Terminal</div>
+				<div class="taskbarWindow" id="cv_boxTaskbar" onclick="toggle('cv_box')">CV&VeryThinSpace;📄</div>
+				<div class="clock" id="clock">
+					<img src="images/AudioSpeakerIcon.png" >
+					17:14
+				</div>
+			</div>
+		</div>
+		<!-- 
+		<div class="mobile_device_380">
+			<!-- Css activates always the 480, to improve -->
+			<!-- <div class="mainbox" id="contact_me_box"style="display: block;"><div class="topbar" id="contact_me_boxheader">Contact
+				<div class="buttons"><div class="topbarButton" onclick="minimise('contact_me_box')">_</div>
+				<div class="topbarButton">□</div>
+				<div class="topbarButton" onclick="hideWindow('contact_me_box')">X</div></div></div>	
+				
+				<div class="content">
+					<a href="mailto:miqueltorner9@gmail.com"> miqueltorner9@gmail.com </a> <br>
+					<a href="https://www.linkedin.com/in/miqueltv/"> LinkedIn </a> <br>
+					<a href="https://github.com/miquelt9"> GitHub </a>
+				</div>
+			</div> 
+		</div>
+		-->
+		<!--
+		<div class="mobile_device_480">
+
+			<div class="mainbox" id="about_me_box" style="display: block;">
+				<div class="topbar" id="about_me_boxheader" style="font-size: 1rem;">System Properties
+				<div class="buttons"><div class="topbarButton">_</div>
+				<div class="topbarButton">□</div>
+				<div class="topbarButton">X</div></div></div>	
+				<!-- <div style="text-align: center;"> Not sure if display my photo in the phone so better not to do so I think
+					<br> 
+					<img src="images/meOnPC.png" style="width: 80%; margin-right: auto; margin-left: auto;">
+				</div> 
+				<div class="content">
+					<div class="properties" style="padding: 10px; text-align: justify;">
+							System: <br>
+							&nbsp; Miquel Torner Viñals <br>
+							&nbsp; 27.03.2002 <br>
+							&nbsp;<br>
+							Registered to: <br>
+							&nbsp; · FIB, Polythecnic University of Catalonia <br>
+							&nbsp; · Bachelor's degree in Informatics Engineering (major in computing)<br>
+							<br>
+							&nbsp;<br>
+							Hi, I'm Miquel! I love programming, cooking, hiking and traveling. <br>
+							Thanks for checking out my website! <br>
+							&nbsp;<br>(Use a desktop/laptop for the full interactive experience)
+					</div>
+				</div>
+
+			</div>
+
+			<div class="mainbox" id="projects_box" style="display: block; ">
+				<div class="topbar" id="projects_boxheader" style="font-size: 1rem;">Projects
+				<div class="buttons"><div class="topbarButton">_</div>
+				<div class="topbarButton">□</div>
+				<div class="topbarButton">X</div></div></div>	
+				
+				<div class="content" style="text-align: justify;">
+					• <strong>Plushistics</strong> &nbsp; <a href="https://devpost.com/software/plushistics"> <u>Devpost</u> </a> <br>
+					&nbsp; A 2D interactive simulator which uses planning algorithms to optimize routes (RoyalHackaway 2023)  <br> <br>
+
+					• <strong>Falcon Explorer</strong> &nbsp; <a href="https://github.com/miquelt9/PROP-FIB"> <u>Github</u> </a> <br>
+					&nbsp;  A file explorer program with a file editor on it (Course Project 2022)  <br> <br>
+
+					• <strong>Chip-Chips</strong> &nbsp; <a href="https://devpost.com/software/chip-chips"> <u>Devpost</u> </a> <br>
+					&nbsp;  An algorithm that minimizes the average length of chains that connect pins in a chip (DatathonFME 2022)  <br> <br>
+
+					• <strong>SpaceShooter</strong> &nbsp; <a href="https://devpost.com/software/spaceshooter-5hi4of"> <u>Devpost</u> </a>  <br>
+					&nbsp; A 2D single player game based in the arcada Asteroids using Unity (HackUPC 2021) <br> <br>
+
+					More comming soon!
+
+				</div>
+
+			</div>
+
+			<div class="mainbox" id="contact_me_box"style="display: block;">
+				<div class="topbar" id="contact_me_boxheader" style="font-size: 1rem;">Contact
+				<div class="buttons"><div class="topbarButton">_</div>
+				<div class="topbarButton">□</div>
+				<div class="topbarButton">X</div></div></div>	
+				
+				<div class="content" >
+					<a href="mailto:miqueltorner9@gmail.com"> miqueltorner9@gmail.com </a> <br>
+					<a href="https://www.linkedin.com/in/miqueltv/"> LinkedIn </a> <br>
+					<a href="https://github.com/miquelt9"> GitHub </a> <br>
+					<a href="./docs/Miquel_Torner_CV.pdf" target="_blank">Check my CV!</a>
+				</div>
+			</div>
+		</div>
+		-->
+	</div>
+</body></html>
