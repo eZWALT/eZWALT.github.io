@@ -1,5 +1,4 @@
 body {
-	background: rgb(146, 246, 251);
 	/* background: linear-gradient(180deg, rgba(177,255,255,1) 0%, rgba(145,255,149,1) 70%, rgba(176,255,251,1) 100%); */
 	max-width: 100%;
 	overflow-x: hidden;
@@ -38,7 +37,7 @@ a {
 
 .the_background {
 	display: block;
-	position: absolute;
+	position: fixed;
 	top:0px;
 	right:0px;
 	bottom:0px;
@@ -51,10 +50,10 @@ a {
 
 .mainbox {
 	display: none;
-	position: absolute;
+	position: fixed;
 	background-color: #EEF2F5;
 	padding: 4px;
-	font-size: 0.8vw;
+	font-size: 1rem;
 	border-bottom: solid 2px #808080;
 	border-right: solid 2px #808080;
 	border-top: solid 2px #FEFFFF;
@@ -117,20 +116,6 @@ div.terminal_box a:active {
 	text-decoration: underline;
 }
 
-.gamebox {
-	display: none;
-	position: absolute;
-	background-color: #171421;
-	padding: 4px;
-	border-bottom: solid 2px #5E5C64;
-	border-right: solid 2px #5E5C64;
-	border-top: solid 2px #5E5C64;
-	border-left: solid 2px #5E5C64;
-	box-shadow: 2px 2px #010101;
-	width: fit-content;
-	height: fit-content;
-}
-
 .terminalcontent {
     flex-grow: 1;
     flex-shrink: 1;
@@ -139,7 +124,7 @@ div.terminal_box a:active {
     overflow-x: hidden;
     overflow-y: scroll;
 	max-height: 30rem;
-	font-size: 0.8vw;
+	font-size: 0.8rem;
 }
 
 .terminalcontent h1 {
@@ -148,7 +133,7 @@ div.terminal_box a:active {
 
 .content {
 	padding: 10px;
-	font-size: 0.7vw;
+	font-size: 0.8rem;
 }
 
 .topbar {
@@ -209,25 +194,8 @@ div.terminal_box a:active {
 	margin-top: 20px;
 }
 
-#shutdownMessage {
-	display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9); /* Add a semi-transparent background overlay if desired */
-    z-index: 9999; /* Ensure it's on top of other content */
-}
-
-#shutdownMessage img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Cover the entire div while maintaining aspect ratio */
-}
-
 .taskbar {
-	position: absolute;
+	position: fixed;
 	background-color: #EEF2F5;
 	border-bottom: solid 2px #808080;
 	border-right: solid 2px #808080;
@@ -235,11 +203,11 @@ div.terminal_box a:active {
 	border-left: solid 2px #FEFFFF;
 	bottom: 0;
 	left: 0;
-	width: 99.8%;
-	height: 2vw;
+	width: 100%;
+	height: 39px; /*This is 2vw of  1080 display*/
 	display: flex;
 	flex-direction: row;
-	font-size: 1vw;
+	font-size: 1rem;
 }
 
 .taskbar img {
@@ -252,24 +220,25 @@ div.terminal_box a:active {
 	border-right: solid 2px #808080;
 	border-top: solid 2px #FEFFFF;
 	border-left: solid 2px #FEFFFF;
-	padding: 4px;
 	cursor: pointer;
-	font-size: 1vw;
+	font-size: 1.1rem;
+	padding-right: 5px;
 }
 
 .startButton img {
-	height: 1.5vw;
-	width: auto;
+	height: 1.5rem;
+	width: 1.5rem;
+	margin-left: 5px;
 }
 
 .startmenu {
 	display: none;
 	background-color: #EEF2F5;
-	height: 67%;
-	width: 20%;
+	height: 67%; /*This gotta be updated as the number of objects in the start menu grows*/ /*THIS ALSO NEEDS TO BE CHANGED FOR THAT EXTRA BOTTOM PADDING */
+	width: 20.5vw; /*THIS SHOULD BE LARGER FOR PHONE DEVICES smth like 30*/
 	bottom: 0;
 	left: 0;
-	position: absolute;
+	position: fixed;
 } 
 
 
@@ -280,7 +249,7 @@ div.terminal_box a:active {
 
 .startmenuItem {
 	background-color: #EEF2F5;
-	width: auto;
+	width: 20vw; /*THIS SHOULD BE LARGER FOR PHONE DEVICES*/
 	margin-bottom: 3px;
 	margin-top: 3px;
 	line-height: 3vw;
@@ -290,7 +259,7 @@ div.terminal_box a:active {
 	border-left: solid 2px #FEFFFF;
 	align-items: center;
 	padding-left: 4px;
-	font-size: 1vw;
+	font-size: 1rem;
 }
 
 .startmenuItem img{
@@ -304,7 +273,7 @@ div.terminal_box a:active {
 	background: linear-gradient(#000184, #0f80cd);
 	color: white;
 
-	width: auto;
+	width: 20vw;
 	margin-bottom: 3px;
 	margin-top: 3px;
 	line-height: 3vw;
@@ -314,7 +283,7 @@ div.terminal_box a:active {
 	border-left: solid 2px #FEFFFF;
 	align-items: center;
 	padding-left: 4px;
-	font-size: 1vw;
+	font-size: 1.2rem;
 }
 
 
@@ -329,7 +298,7 @@ div.terminal_box a:active {
 	border-right: solid 2px #808080;
 	border-top: solid 2px #FEFFFF;
 	border-left: solid 2px #FEFFFF;
-	padding: 4px;
+	padding: 10px;
 	cursor: pointer;
 }
 
@@ -357,7 +326,7 @@ div.terminal_box a:active {
 	flex-direction: column;
 	align-items: center;
 	padding: 15px;
-	font-size: 10px;
+	font-size: 0.625rem;
 	overflow-wrap: auto;
 	cursor: pointer;
 }
@@ -384,7 +353,8 @@ div.terminal_box a:active {
 }
 
 .properties img {
-	width: 20%;
+	width:30%;
+	height: 30%;
 	padding: 20px;
 }
 
@@ -392,121 +362,26 @@ div.terminal_box a:active {
 	padding: 20px;
 }
 
-.mobile_device_380 {
-	display: none;
-}
-
-.mobile_device_480 {
-	display: none;
-}
-
-@media screen and (max-width: 380px){
-	.mobile_device_380 {display: none;}   
-	.mobile_device_480 {display: block;}           
-	.desktop_device {display: none;}
-
-	body {
-		background: rgb(146, 246, 251);
-		/* background: linear-gradient(180deg, rgba(177,255,255,1) 0%, rgba(145,255,149,1) 70%, rgba(176,255,251,1) 100%); */
-		background: gradien;
-		max-width: 100%;
-		overflow-x: auto;
-		font-family: "Press Start 2P", 'Courier New', Courier, monospace;
-		font-weight: 400;
-		/* overflow: hidden; */
-	}
-}
-
-@media screen and (max-width: 480px){
-	.mobile_device_380 {display: none;}   
-	.mobile_device_480 {display: block;}           
-	.desktop_device {display: none;}
-
-	body {
-		background: rgb(146, 246, 251);
-		/* background: linear-gradient(180deg, rgba(177,255,255,1) 0%, rgba(145,255,149,1) 70%, rgba(176,255,251,1) 100%); */
-		background: gradien;
-		max-width: 100%;
-		overflow-x: auto;
-		font-family: "Press Start 2P", 'Courier New', Courier, monospace;
-		font-weight: 400;
-		/* overflow: hidden; */
-	}
-
-	.mainbox {
-		display: block;
-		position: relative;
-		margin: 10px;
-		left: 3%;
-		min-width: 80%;
-		font-size: 10vw;
-	}
-
-	.topbar {
-		display: flex;
-		flex-direction: row;
-		background: rgb(106, 166, 240);
-		font-size: 0%;
-		color: white;
-	}
-}
-
-@media screen and (max-width: 768px){
-
-	.mainbox {
-		display: block;
-		position: relative;
-		margin: 20px;
-		left: 2%;
-		max-width: 60%;
-		font-size: 3.2vw;
-	}
-
-	.topbar {
-		font-size: 3vw;
-	}
-
-	.desktopicon {
-		display: none;
-	}
-
-	.taskbar {
-		display: none;
-	}
-
-	.topbarButton {
-		width: 2vw;
-		height: 2vw;
-		font-size: 2vw;
-	}
-
-}
-
-*, *:before, *:after {
-    box-sizing: inherit;
-  }
-  
-
-  /*experimental stuff for error*/
-  /*
-  body,
-  html,
-  .flex-full-justify,
-  .overlay {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-  }
-  
-  body {
+.error_message {
+	display: none; /*This value should change accordingly to state of the site*/
+	font-size:16px; /*THIS SHOULD BE SET TO 12px for phones or even 10px*/
+	font-family: "Press Start 2P", 'Courier New', Courier, monospace;
     background-color: #00a;
-    color: #f1f1f1;
-  }
-  
-  .overlay {
-    position:absolute;
-    z-index:2;
+	color: #f1f1f1;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+}
+
+.overlay {
+    position:fixed;
     pointer-events: none;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
 
     &.overlay--vignette {
         background-image: radial-gradient(ellipse at center, rgba(0,0,0,0) 50%, rgba(0,0,0,0.25) 100%);
@@ -514,58 +389,69 @@ div.terminal_box a:active {
 
     &.overlay--scanline {
         background-image: linear-gradient(0deg, rgba(0,0,0,0) 25%, rgba(0,0,0,0.33) 25%, rgba(0,0,0,0.33) 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 75%, rgba(0,0,0,0.33) 75%, rgba(0,0,0,0.33) 100%);
-        background-size: 4px 4px;
+        background-size: 6px 6px;
     }
-  }
+}
+
+.error_container {
+	margin-top: 25vh; /*THIS SHOULD BE SET TO 20VH FOR PHONES*/
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	position: fixed;
+}
   
-  .flex-full-justify {
-    padding:3rem 4rem;
+
+.error_message h1 {
+	background-color: silver;
+	color: #00a;
+	padding: 0 1rem;
+	font-size: 3rem;
+	display: inline-block;
+}
+
+.error_title {
+	text-align: center;
+	padding: 1vh;
+}
+
+.blink {
+	animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+	66% {
+		opacity: 0;
+	}
+}
+
+
+.bios_setup {
+    background: #000;
+    font-family: "Press Start 2P", 'Courier New', Courier, monospace;
+    font-size: 22px;
+    color: #888;
     display: flex;
     justify-content: center;
-    align-items: center;
-    
-    > .flex-inner {
-      max-width: 40rem;
-    }
-  }
-  
-  h1 {
-    background-color: silver;
-    color: #00a;
-    padding: 0 1rem;
-    font-size: 1rem;
-    display: inline-block;
-  }
-  
-  ul {
-    list-style-type: none;
-    padding-left: 1.5em;
-    
-    > li {
-      position: relative;
-      
-      &:before {
-        font-family: "Perfect DOS";
-        color: #f1f1f1;
-        content: "*";
-        position: absolute;
-        left: -1.5em;
-        font-size:1rem;
-      }
-    }
-  }
-  
-  .text-center {
-    text-align: center;
-  }
-  
-  .blink {
-    animation: blink 1s steps(1) infinite;
-  }
-  
-  @keyframes blink {
-    66% {
-      opacity: 0;
-    }
-  }
-  */
+    overflow: hidden;
+    margin: 0;
+    transform: scale(0.6) translateY(-25%);
+}
+
+@media screen and (max-width: 380px){
+	body{
+		font-size: 10px;
+	}
+}
+
+@media screen and (max-width: 480px){
+	body{
+		font-size: 8px;
+	}
+}
+
+@media screen and (max-width: 768px){
+	body{
+		font-size: 14px;
+	}
+}

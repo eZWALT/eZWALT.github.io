@@ -1,9 +1,13 @@
-const boxes = ["about_me_box", "skills_box", "certification_box" ,"projects_box", "contact_me_box", "terminal_box", "cv_box", "certification_box_mentoria"]
+const boxes = ["about_me_box", "skills_box", "certification_box" ,"projects_box", "contact_me_box", "terminal_box", "cv_box", "certification_box_mentoring", "certification_box_ml"]
 
 const pos_boxes = []
 
+const error_sound = new Audio("./sounds/error_sound.mp3");
+
+const startup_sound = new Audio("./sounds/startup_sound.mp3");
 
 
+//This function is only called whenever the html DOM is loaded , when booting the page up
 document.addEventListener("DOMContentLoaded", function(event) {
     //Load pos boxes (used for keeping the z-index of each box)
     for (let i = 0; i < boxes.length; i++) {
@@ -17,21 +21,33 @@ document.addEventListener("DOMContentLoaded", function(event) {
     setInterval(getCurrentTime, 1000);
 });
 
-function shutDown(){
-  var elements = document.getElementsByTagName("*");
-
-  for(var i=0; i < elements.length; ++i){
-    elements[i].style.display = "none";
+function shut_down(){
+  var background_div = document.querySelector('.the_background');
+  if (background_div) {
+    background_div.style.display = 'none';
   }
-}
-
-function shutDownComputer(){
-  shutDown()
 
 }
 
-function updateComputer(){
-  shutDown()
+function show_error_message(){
+  var error_message_div = document.querySelector('.error_message');
+  if (error_message_div) {
+    error_message_div.style.display = 'block';
+  }
+  error_sound.play();
+}
+
+async function shut_down_computer(){
+  shut_down()
+  await new Promise(r => setTimeout(r, 100)); //sleep for 2000 miliseconds
+  show_error_message()
+
+}
+
+async function update_computer(){
+  shut_down()
+  await new Promise(r => setTimeout(r, 100)); //sleep for 2000 miliseconds
+  show_error_message()
 }
 
 
@@ -43,13 +59,13 @@ function showWindow(window) {
   
   bringToFront(window);
   document.getElementById(window).style.display = "block";
-  document.getElementById(window + "Taskbar").style.display = "block";
+  document.getElementById(window + "_taskbar").style.display = "block";
 }
 
 function hideWindow(window) {
   kill_process_named(window);
   document.getElementById(window).style.display = "none";
-  document.getElementById(window + "Taskbar").style.display = "none";
+  document.getElementById(window + "_taskbar").style.display = "none";
 }
 
 // Just used for games box
@@ -58,7 +74,7 @@ function closeWindow(window) {
   var iframe = document.getElementById(window + "game");
   iframe.remove();
   document.getElementById(window + "box").style.display = "none";
-  document.getElementById(window + "box" + "Taskbar").style.display = "none";
+  document.getElementById(window + "box" + "_taskbar").style.display = "none";
 }
 
 function openWindow(window) {
@@ -66,7 +82,7 @@ function openWindow(window) {
   populate_process(window);
   bringToFront(window + "box");
   document.getElementById(window + "box").style.display = "block";
-  document.getElementById(window + "box" + "Taskbar").style.display = "block";
+  document.getElementById(window + "box" + "_taskbar").style.display = "block";
 
 }
 
@@ -93,7 +109,7 @@ function toggle(window) {
 }
 
 function startMenu() {
-  var element = document.getElementById('startbutton');
+  var element = document.getElementById('startmenu');
   if (element.style.display == "none"){
     element.style.display = "block";
   } else {

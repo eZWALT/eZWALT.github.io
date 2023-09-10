@@ -1,22 +1,57 @@
 <!DOCTYPE html>
-<html data-lt-installed="true"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<html data-lt-installed="true">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
 	<title>Walter's Place</title>
 	<!-- <link rel="icon" href="images/tablogo.png"> -->
+
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com/">
 	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
 	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 	<link href="https://db.onlinewebfonts.com/c/47d5fd8c3738de46ef0b3fe3f68c289a?family=Perfect+DOS+VGA+437" rel="stylesheet">
+	
 	<script type="text/javascript" src="js/script.js"></script>
 	<script type="text/javascript" src="js/sl.js"></script>
+	<!-- <script type="text/javascript" src="js/bios.js"></script> -->
+
 </head>
 
 
 <body>
+	<!-- STARTUP -->
+	<!--
+	<div class="bios_startup" style="display: none;">
+		<award-boot></award-boot>
+	</div>
+	-->
 
+	<!-- ERROR MESSAGE -->
+	<div class="error_message">
+		<div class="overlay overlay--scanline"></div>
+		<div class="overlay overlay--vignette"></div>
+		<div class="error_container">
+			<div class="error_title">
+				<h1>Windows 2002 </h1>
+			</div>
+
+			<p>A fatal exception 0x4OE7E55 has ocurred :( </p>
+
+			<p>You will lose any unsaved information in all open applications </p>
+
+			<p> You didn't even found the secret easter egg on the terminal </p>
+
+			<p> Are you sure you really want to leave?</p>
+			<br><br><br>
+
+			<p class="text-center">Press F5 to restart your computer <span class="blink">_</span></p>
+
+		</div>
+	</div>
+
+	<!-- WHOLE PC-->
 	<div class="the_background">
 		
 		<div class="desktop_device">
@@ -30,24 +65,27 @@
 				
 				<div class="content">
 					<div class="properties">
-					<img src="images/photoOfMe.jpg" style="width:30%; height: 30%;">
+					<img src="images/photoOfMe.jpg">
 						<div class="txt">
-							Hello World:<br>
+
+							Hello World ! <br> <br> 
+	
+							System Properties:<br>
 							<br>
-							&nbsp;++Walter J. Troiani Vargas <br> 
-							&nbsp;++02/09/2002 <br> 
-							&nbsp;++Half spanish half italian <br>
+							&nbsp;• Walter J. Troiani Vargas <br> 
+							&nbsp;• 02/09/2002 <br> 
+							&nbsp;• Half spanish half italian <br>
 							<br>
 							Career:<br>
 							<br>
-							&nbsp;++Computer & Data Scientist <br>
-							&nbsp;++Currently enrolled on my last year of Computer Science & Engineering at Polythecnic University of Catalonia (Barcelona) <br>
-							&nbsp;++Working as a Data Scientist DevOps at MANGO<br>
+							&nbsp;• Computer & Data Scientist <br>
+							&nbsp;• Currently enrolled on my last year of Computer Science & Engineering at Polythecnic University of Catalonia (Barcelona) <br>
+							&nbsp;• Working as a Data Scientist DevOps at MANGO<br>
 							<br>
 							My interests: <br>
 							<br>
-							&nbsp;++I'm a tech enthusiast and my current interests are Compilers, Data Science, Machine Learning, Stocks Market , Hackathons, Cloud Computing and Maths. <br>
-						    &nbsp;++On my free time I love reading, playing the piano, lifting heavy weights, calisthenics, hiking, and most importantly, learning something new every day. <br>
+							&nbsp;• I'm a tech enthusiast and my current interests are Compilers, Data Science, Machine Learning, Stocks Market , Hackathons, Cloud Computing and Maths. <br>
+						    &nbsp;• On my free time I love reading, playing the piano, lifting heavy weights, calisthenics, hiking, and most importantly, learning something new every day. <br>
 							<br>
 							<br>
 							Thanks for checking out my place!
@@ -126,8 +164,8 @@
 				<div class="topbarButton" onclick="hideWindow('certification_box')">X</div></div></div>	
 				
 				<div class="content">
-					<a class="windowslink" onclick="showWindow('certification_box_mentoria')" style="padding-left: 0%;"> • Coaching techniques for academic mentoring by UPC </a> <br> <br>
-					<a class="windowslink" onclick="showWindow('certification_box_ML')" style="padding-left: 0%;"> • Machine learning Specialization by Coursera </a> <br> <br>
+					<a class="windowslink" onclick="showWindow('certification_box_mentoring')" style="padding-left: 0%;"> • Coaching techniques for academic mentoring by UPC </a> <br> <br>
+					<a class="windowslink" onclick="showWindow('certification_box_ml')" style="padding-left: 0%;"> • Machine learning Specialization by Coursera </a> <br> <br>
 					• Driving License (Work in progress EDC 12/2023) <br> <br>
 					• English CAE C1 certification (Work in progress EDC 4/2023) <br> <br>
 					• AWS cloud practitioner (Work in progress EDC 6/2024) <br> <br>
@@ -180,7 +218,7 @@
 						<div class="txt" style="margin-right: -4px;">
 							<a href="mailto:waltertv02@gmail.com"> waltertv02@gmail.com </a> <br>
 							<a href="https://www.linkedin.com/in/walterjtv/"> Linkedin Profile </a> <br>
-							<a href="https://github.com/miquelt9"> GitHub Activity </a> <br>
+							<a href="https://github.com/eZWALT"> GitHub Activity </a> <br>
 							<a class="windowslink" onclick="showWindow('cv_box')" style="padding-left: 0%;">Check my CV!</a>
 						</div>
 
@@ -226,19 +264,19 @@
 				<iframe id="iframepdf" style="width: 1280px; height: 780px" src="./docs/cv.pdf"></iframe>
 			</div>
 
-			<div class="cv_box" id="certification_box_mentoria"style="display: none;">
-				<div class="topbar" id="cert_mentoria_header">&nbsp;Certification&VeryThinSpace;📄
-				<div class="buttons"><div class="topbarButton" onclick="minimise('certification_box_mentoria')">_</div>
+			<div class="cv_box" id="certification_box_mentoring"style="display: none;">
+				<div class="topbar" id="cert_mentoring_header">&nbsp;Mentoring&VeryThinSpace;📄
+				<div class="buttons"><div class="topbarButton" onclick="minimise('certification_box_mentoring')">_</div>
 				<div class="topbarButton">□</div>
-				<div class="topbarButton" onclick="hideWindow('certification_box_mentoria')">X</div></div></div>	
+				<div class="topbarButton" onclick="hideWindow('certification_box_mentoring')">X</div></div></div>	
 				<iframe id="iframepdf" style="width: 1280px; height: 780px" src="./docs/cert_mentoria.pdf"></iframe>
 			</div>
 
-			<div class="cv_box" id="certification_box_ML"style="display: none;">
-				<div class="topbar" id="cert_ml_header">&nbsp;Certification&VeryThinSpace;📄
-				<div class="buttons"><div class="topbarButton" onclick="minimise('certification_box_ML')">_</div>
+			<div class="cv_box" id="certification_box_ml"style="display: none;">
+				<div class="topbar" id="cert_ml_header">&nbsp;Machine Learning&VeryThinSpace;📄
+				<div class="buttons"><div class="topbarButton" onclick="minimise('certification_box_ml')">_</div>
 				<div class="topbarButton">□</div>
-				<div class="topbarButton" onclick="hideWindow('certification_box_ML')">X</div></div></div>	
+				<div class="topbarButton" onclick="hideWindow('certification_box_ml')">X</div></div></div>	
 				<iframe id="iframepdf" style="width: 1280px; height: 780px" src="./docs/cert_ml.pdf"></iframe>
 			</div>
 
@@ -255,7 +293,7 @@
 			</div>
 			
 			<!-- START MENU -->
-			<div class="startmenu" id="startbutton" style="display: none;">
+			<div class="startmenu" id="startmenu" style="display: none;">
 
 				<ul>
 
@@ -296,12 +334,12 @@
 					
 					<hr> 
 					
-					<li class="startmenuItem" id="windowsupdate" onclick="updateComputer()">
+					<li class="startmenuItem" id="windowsupdate" onclick="update_computer()">
 						<img src="images/WorldWindowsIcon.png">
 						&MediumSpace;&MediumSpace; Update
 					</li>
 
-					<li class="startmenuItem" id="shutdown" onclick="shutDownComputer()"> 
+					<li class="startmenuItem" id="shutdown" onclick="shut_down_computer()"> 
 						<img src="images/ShutDownIcon.png">
 						&MediumSpace;&MediumSpace; Shut Down
 					</li>
@@ -310,16 +348,22 @@
 				</ul>
 			</div>
 			
+			<!-- SHOULD BE DISABLED FOR MOBILE DEVICES-->
 			<!-- TASKBAR -->
 			<div class="taskbar" id="taskbar">
-				<div class="startButton" onclick="startMenu()" id="startmenu"> <img src="images/LogoWindows95.png"> Start </div>
-				<div class="taskbarWindow" id="about_me_boxTaskbar" onclick="toggle('about_me_box')" style="display: none;">About Me</div>
-				<div class="taskbarWindow" id="skills_boxTaskbar" onclick="toggle('skills_box')" style="display: none;">Skills</div>
-				<div class="taskbarWindow" id="projects_boxTaskbar" onclick="toggle('projects_box')" style="display: none;">Projects</div>
-				<div class="taskbarWindow" id="certification_boxTaskbar" onclick="toggle('certification_box')" style="display: none;">Certifications...</div>
-				<div class="taskbarWindow" id="contact_me_boxTaskbar" onclick="toggle('contact_me_box')">Contact</div>
-				<div class="taskbarWindow" id="terminal_boxTaskbar" onclick="toggle('terminal_box')">Terminal</div>
-				<div class="taskbarWindow" id="cv_boxTaskbar" onclick="toggle('cv_box')">CV&VeryThinSpace;📄</div>
+				<div class="startButton" onclick="startMenu()" id="startmenu">
+					 <img src="images/LogoWindows95.png">
+					  Start 
+				 </div>
+				<div class="taskbarWindow" id="about_me_box_taskbar" onclick="toggle('about_me_box')" style="display: none;">About Me</div>
+				<div class="taskbarWindow" id="skills_box_taskbar" onclick="toggle('skills_box')" style="display: none;">Skills</div>
+				<div class="taskbarWindow" id="projects_box_taskbar" onclick="toggle('projects_box')" style="display: none;">Projects</div>
+				<div class="taskbarWindow" id="certification_box_taskbar" onclick="toggle('certification_box')" style="display: none;">Certifications</div>
+				<div class="taskbarWindow" id="contact_me_box_taskbar" onclick="toggle('contact_me_box')">Contact</div>
+				<div class="taskbarWindow" id="terminal_box_taskbar" onclick="toggle('terminal_box')">Terminal</div>
+				<div class="taskbarWindow" id="cv_box_taskbar" onclick="toggle('cv_box')">CV&VeryThinSpace;📄</div>
+				<div class="taskbarWindow" id="certification_box_mentoring_taskbar" onclick="toggle('certification_box_mentoring')">Mentoring</div>
+				<div class="taskbarWindow" id="certification_box_ml_taskbar" onclick="toggle('certification_box_ml')">Machine Learning</div>
 				<div class="clock" id="clock">
 					<img src="images/AudioSpeakerIcon.png" >
 					17:14

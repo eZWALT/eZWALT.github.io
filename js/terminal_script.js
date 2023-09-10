@@ -449,7 +449,7 @@ function start() {
     }
 
     var FILES = {};
-    var HIDEN_FILES = {};
+    var HIDDEN_FILES = {};
 
     var link = document.createElement("a");
     link.innerText = "waltertv02@gmail.com\n";
@@ -481,15 +481,15 @@ function start() {
     FILES["linkedin"] = link;
 
     var secret_link = document.createElement("a");
-    HIDEN_FILES["."] = secret_link
+    HIDDEN_FILES["."] = secret_link
 
     var secret_link = document.createElement("a");
-    HIDEN_FILES[".."] = secret_link
+    HIDDEN_FILES[".."] = secret_link
 
     var about = document.createElement("div");
 
     var p = document.createElement("p");
-    p.innerText = "Hello there , fellow linux users (Penguin emoji) (fedora emoji) (cup of tea emoji)";
+    p.innerText = "Hello there , fellow linux users 🐧 🎩 ☕";
     about.appendChild(p);
 
     p = document.createElement("p");
@@ -517,14 +517,14 @@ function start() {
     p.innerText = "Contact me for your well deserved cup of coffee!"
     about.appendChild(p)
 
-    FILES["easteregg"] = about;
+    HIDDEN_FILES["easteregg"] = about;
 
     function cmd_ls(args) {
         if (args.length < 1) {
             print_output(Object.keys(FILES).join("\t") + "\n");
         }
         else if (args.length == 1 && (args[0] == "-a" || args[0] == "-la")) {
-            print_output(Object.keys(HIDEN_FILES).join("\t") + "\n" + Object.keys(FILES).join("\t") + "\n");
+            print_output(Object.keys(HIDDEN_FILES).join("\t") + "\n" + Object.keys(FILES).join("\t") + "\n");
         }
         else {
             print_output("Usage: ls\n");
@@ -556,7 +556,11 @@ function start() {
         for (var arg of args) {
             if (FILES[arg]) {
                 output_html(FILES[arg])
-            } else {
+            } 
+            else if(HIDDEN_FILES[arg]){
+                output_html(HIDDEN_FILES[arg])
+            }
+            else {
                 print_output("cat: No such file\n");
                 return;
             }
@@ -570,7 +574,7 @@ function start() {
     var LINKS = {
         "github": "https://github.com/eZWALT",
         "linkedin": "https://www.linkedin.com/in/walterjtv/",
-        "cv": "./docs/CV.pdf",
+        "cv": "./docs/cv.pdf",
     }
 
     function cmd_cd(args) {
