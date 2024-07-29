@@ -53,7 +53,7 @@ function kill_process_id(process_id) {
         document.getElementById(p_name).remove();
     }
     else if (p_name == "icons") {
-        var icons = ["aboutme",,"skills","projects","certifications", "contactme","terminal"]
+        var icons = ["aboutme","hardskills","softskills","projects","certifications", "contactme","terminal"]
         for (let icon in icons) document.getElementById(icons[icon]).remove();
     }
     else if (p_name == "bash") {

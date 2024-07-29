@@ -1,4 +1,4 @@
-const boxes = ["about_me_box", "skills_box", "certification_box" ,"projects_box", "contact_me_box", "terminal_box", "cv_box", "certification_box_mentoring", "certification_box_ml"]
+const boxes = ["about_me_box", "hard_skills_box", "soft_skills_box", "certification_box" ,"projects_box", "contact_me_box", "terminal_box", "cv_box", "certification_box_mentoring", "certification_box_ml"]
 
 const pos_boxes = []
 
