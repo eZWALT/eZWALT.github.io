@@ -1,0 +1,323 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,8pt]{article} % Changed 11pt to 10pt for smaller font size
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{multicol}
+\usepackage{geometry} % Added to adjust margins
+\input{glyphtounicode}
+
+% Adjust margins
+\geometry{left=0.5in, right=0.5in, top=0.5in, bottom=0.5in} % Adjusted margins
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Walter J. Troiani Vargas} \\ \vspace{1pt}
+    \textbf{\Large \scshape Computer \& Data Scientist} \\ \vspace{1pt}
+    \textbf{\big \scshape  Specialized in AI \& Natural Language Processing} \\ 
+    \vspace{2pt}
+    
+    \small +34 642 35 60 26 $|$ \href{mailto:x@x.com}{\underline{waltertv02@gmail.com}} $|$ 
+    \href{https://linkedin.com/in/...}{\underline{https://www.linkedin.com/in/walterjtv}} $|$ 
+    \href{https://ezwalt.github.io/}{\underline{https://ezwalt.github.io/}}
+\end{center}
+\vspace{-0.75cm}
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Technical University of Catalonia (UPC)}{Barcelona, Spain}
+      {B.Sc. in Computer Science}{Sep 2020 – Jun 2024}
+    \resumeSubheading
+      {Technical University of Catalonia (UPC)}{Barcelona, Spain}
+      {M.Sc. in Data Science}{Sep 2024 – Jul 2025}
+    \resumeItemListStart
+\resumeItem{\textbf{Nova 111 Student Spain 2026}, selective national top 0.01\% CS talent award for academic and technical excellence.}
+      \resumeItemListEnd
+    \resumeSubheading
+      {University of Padova (Università degli Studi di Padova)}{Padova, Italy}
+      {International Double M.Sc. in Data Science}{Sep 2025 – Jul 2026}
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+    
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+    {MLOps Engineer}{February 2026 - Present}
+    {Multiverse Computing}{Barcelona, Spain}
+    \resumeItemListStart
+
+    \resumeItem{Spearheaded the development of an \textbf{AutoML framework for distributed LLM compression}, integrating distillation, pruning, and quantization into unified pipelines to enable no-code compression while maintaining within 5\% of baseline performance across multiple benchmarks. Standardized and centralized company-wide compression recipes, \textbf{reducing experiment reproduction time from months to days.}}
+
+    \resumeItem{Managed and scaled heterogeneous multi-cloud Kubernetes infrastructure supporting 1,000+ GPUs (H200, L40S, B200/B300), and \textbf{led deployment of one of Europe's first large-scale B300/B200 clusters (224+ GPUs)}, enabling distributed training and high-throughput experimentation through Coder and SkyPilot.}
+
+    
+    \resumeItem{Designed and \textbf{migrated 500+ TB} of ML storage to a modular multi-region architecture, provisioning isolated FSx and S3 resources via Terraform and CI/CD automation. Reduced storage footprint by 3$\times$ and infrastructure costs by 67\% while enabling zero-downtime adoption across teams.}
+
+    \resumeItem{Reconstructed end to end the \href{https://huggingface.co/MultiverseComputingCAI/LittleLamb}{\textbf{LittleLamb}} training pipeline for sub-billion-parameter reasoning LLMs, covering pretraining, mid-training, and post-training stages with online off-policy knowledge distillation and supervised fine-tuning on large-scale distributed clusters. Achieved up to \textbf{50\% model compression} within Megatron-LM while maintaining competitive reasoning performance for edge AI.}
+    \resumeItemListEnd
+
+    
+    \resumeSubheading
+    {AI Research Assistant}{February 2026 - Present}
+    {Telefonica Research}{Barcelona, Spain}
+
+    \resumeItem{Researching advertising opportunities and optimal ad allocation policies in multi-turn LLM-based conversational agents focusing on optimizing the trade-offs between user trust, advertiser utility, and long-term platform sustainability. Building an experimental framework combining behavioral interaction data and psychometric features (OCEAN) for adaptive conversational recommendation, and proposing alternative evaluation metrics beyond CTR to capture trust-aware and long-horizon outcomes. Ongoing work includes the design of a multimodal user study using EEG and eye-tracking to measure neurophysiological responses to persuasion and different ad formats.}
+    
+    \resumeSubheading
+    {AI Engineer Intern}{June 2025 - September 2025}
+    {Conseil Européen pour la Recherche Nucléaire (CERN)}{Geneva, Switzerland}
+    \resumeItemListStart
+
+    \resumeItem{Led end-to-end development of AccGPT RAG for BE-ICS support, boosting Answer Correctness by \textbf{+55\%} with RAG integration and and iterative prompt engineering across 10+ foundation models, improving reliability for 250+ SCADA applications.}
+    
+    \resumeItem{Architected a \textbf{Scalable} MLOps ETL pipeline (CLI + Streamlit GUI) with 99.95\% fault tolerance to ingest, summarize, embed and index $\sim$40M tokens of Jira cases ($\approx$33$\times$ Shakespeare Corpus) into ChromaDB at 5M tokens/hr.}
+    
+    \resumeItem{Reduced Jira history size \textbf{10$\times$} via a Map-Reduce hierarchical summarization algorithm for semantic retrieval at scale.}
+    
+    \resumeItem{Designed and implemented an automated, modular LLM-as-a-Judge evaluation framework with 7 custom metrics (Correctness, Faithfulness, Context Precision...), enabling cross-model benchmarking and cutting evaluation time by \textbf{orders of magnitude}.}
+
+    
+    \resumeItem{Automated Q\&A test-set creation with human-in-the-loop curation, increasing expert throughput \textbf{1167\%} and producing high-quality test data for benchmarking.}
+    
+    
+    \resumeItem{Developed a Jira Issue Recommender leveraging semantic embeddings and HNSW algorithm to surface related historical tickets to cut duplicate troubleshooting.}
+
+    \resumeItemListEnd
+  
+    \resumeSubheading
+    {LLVM Software Engineer}{October 2024 - July 2025}
+    {Barcelona Supercomputing Center (BSC)}{Barcelona, Spain}
+    \resumeItemListStart
+        
+         \resumeItem{Led the implementation of OpenMP 6.0 Loop Transformations in the LLVM community, including development of advanced optimizations such as Loop Fusion and Loop Fission in  Clang’s front-end to improve scalability in HPC applications.}
+         
+        \resumeItem{
+          Actively contributed to the \textbf{OpenMP and LLVM communities}, managing complex git workflows, reviewing patches and mentoring new contributors in open-source development.
+        }
+
+    \resumeItemListEnd
+
+    
+    \resumeSubheading
+      {Data Scientist}{July 2023 - July 2024}
+      {MANGO}{Barcelona, Spain}
+      \resumeItemListStart
+        \resumeItem{Developed an end-to-end LLM document translation application gathering requirements with the translation team on a weekly basis, \textbf{reducing costs by €30K in the first month}}
+        \resumeItem{Created REST endpoints using Dockerized Lambda's, API Gateway, and S3 for a critical size curve prediction model, \textbf{cutting deployment time by 40\%}}
+        \resumeItem{Implemented a \textbf{recommender system} for automatic product descriptions using \textbf{Siamese networks} and the FashionCLIP model}
+        \resumeItem{Crafter an advanced Streamlit dashboard with \textbf{explainable-AI (SHAP)} and KPI visualization to \textbf{enhance business decision-making in best seller predictions}}
+        \resumeItem{Authored comprehensive knowledge-transfer and API documentation using OpenAPI, streamlining project onboarding}
+        \resumeItem{Provisioned AWS services with Terraform through Jenkins CI/CD pipelines and BitBucket webhooks, adhering strictly to \textbf{DevOps and MLOps} methodologies and \textbf{led Databricks, Airflow and Python migrations on established, high-impact projects.}}
+
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%---------- SIDE CAREER ----------
+\section{Side-Career}
+    \resumeSubHeadingListStart
+    \resumeSubheading
+      {External relations Manager}{October 2022 - June 2025}
+      {FibVisiona}{Barcelona, Spain}
+      \resumeItemListStart
+        \resumeItem{Initiated outreach with over 50+ \textbf{leading tech companies} such as Mango, CaixaBank, HP, Dynatrace, Glovo...}
+        \resumeItem{Authored a Battle Pass system to gamify the fair, enhancing user retention and engagement by atleast 33\%}
+        \resumeItem{Successfully \textbf{connected 2000+} students with tech industry opportunities and and managed external relations team of 3 members}
+    \resumeItemListEnd
+    \resumeSubheading
+    {Undergraduate Hardware Teacher}{October 2021 - June 2023}
+    {UPC}{Barcelona, Spain}
+    \resumeItemListStart
+        \resumeItem{Achieved a 98\%+ pass rate among students}
+        \resumeItem{Taught over 100 students and conducted classes with over 40 students}
+    \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Certifications \& Licenses}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Stanford Machine Learning Specialization}}{2023}
+      \resumeProjectHeading
+          {\textbf{DGT Driving License}}{2024}
+      \resumeProjectHeading
+          {\textbf{Professional Scrum Master I}}{2024}
+      \resumeProjectHeading
+          {\textbf{HuggingFace Model Context Protocol Course}}{2025}
+      \resumeProjectHeading
+          {\textbf{HuggingFace Agents Course}}{2025}
+
+
+    \resumeSubHeadingListEnd
+
+% NEW DBS: PINECONE, DUCKDB, NEO4J ORACLESQL, 
+% NEW programming language: FORTRAN 
+% NLP, ETL, STATS, MVA,  MLOPS
+%-----------PROGRAMMING SKILLS-----------
+
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \footnotesize{\item{
+     \textbf{Languages}{:\textit{C}, \textit{C++}, \textit{Python}, \textit{Rust}, Java, SQL, JavaScript, HTML/CSS, R, Haskell, Prolog, Kotlin, Swift, Groovy, CUDA, Mojo,  x86, RISC-V} \\
+     \textbf{MLOps}{: Git, Jenkins, Docker/Compose, Podman, Kubernetes, Helm,  Airflow, AWS, Terraform, VS Code, Postman, FastAPI, HuggingFace, ZenML, CometML, MLFlow, Ragas, DeepEval, LlamaIndex, LangChain, LangGraph, Gradio, PydanticAI, CrewAI, DSPy, OLlama, vLLM, ArgoCD, SkyPilot, Coder, ClearML, Ray, Megatron, NeMo} \\
+     \textbf{Frameworks}{: Streamlit, FastAPI, Flask, Django, PySpark, PyTorch, Tensorflow, Scikit-learn, OpenCV}\\
+     \textbf{Compilers} {:  LLVM IR, MLIR, Clang, Flang, OpenCL, OpenMP, OpenGL, GLSL, WebGPU, ONNX, TVM, GDB/LLDB} \\
+     \textbf{Databases \& Big Data}{: Neo4J, PostgreSQL, OracleSQL, MySQL, DuckDB, Hadoop MapReduce, Spark, HBase, ZooKepeer, HDFS, Delta-lake, MongoDB, ElasticSearch, Talend ETL, Kafka, Amazon S3/RDS, GraphQL, GraphDB, SPARQL, Cassandra, ChromaDB, MinIO, Qdrant, FAISS} \\
+     \textbf{Project Management}{: Agile, Scrum, LeSS, Kanban, Extreme Programming (XP)}
+    }}
+ \end{itemize}
+
+
+\begin{multicols}{2}
+
+%-----------Languages -----------
+\section{Languages}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \footnotesize{
+    \item{\textbf{Spanish}: Native}
+    \item{\textbf{Catalan}: Native}
+    \item{\textbf{English}: Advanced}
+    \item{\textbf{Italian}: Intermediate (B1)}
+    \item{\textbf{German}: Intermediate (B1)}
+    }
+ \end{itemize}
+
+\columnbreak
+
+%-----------Projects-----------
+\section{Projects}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \footnotesize{
+        \item{\textbf{Pedantically Reinforced Large Language Model (PRLLM)}}:             \href{https://github.com/eZWALT/RL-Reinforcement-Learning/tree/main/PROJECT}{Pedantic SmolLM2 Preference Alignment with PPO based RLHF}
+
+        \item{\textbf{Size does not matter: Sub-Billion VLM NanoChimera is All You Need!}}:
+        \href{https://github.com/eZWALT/CVCS-Computer-Vision-and-Cognitive-Systems/tree/main/PROJECT}{Visual Pretraining of a Vision Language Model}
+
+        \item{\textbf{Read My Mind: EEG Motor Imagery Decoding with the Multi-Scale Dual-Axis Conformer}}: \href{https://github.com/eZWALT/RL-Reinforcement-Learning/tree/main/PROJECT}{Novel Dual Conformer}
+
+        \item{\textbf{VibeRadar}}: \href{https://github.com/eZWALT/BDM-Big-Data-Management/tree/main/PROJECT}{End-to-End Live Product Sentiment-Analysis}
+
+
+        
+        \item{\textbf{eZAutoML}:
+            \href{https://github.com/eZWALT/eZAutoML}{eZAutoML Repository}
+            \href{https://pypi.org/project/eZAutoML/}{PyPI Download}
+        }
+        
+        \item{\textbf{LLM from Scratch (WIP)}:
+            \href{https://github.com/eZWALT/LLM-from-Scratch-Pretrain-and-Pray}{LLM pretraining from Reddit}
+        }
+        
+        \item{\textbf{ClangIR - LLVM OpenSource contribs. (Thesis)}:             
+            \href{https://github.com/Llvm/clangir}{Repository}
+        }
+        \item{\textbf{The Troiani Programming Language (WIP)}: 
+            \href{https://github.com/eZWALT/Troiani}{Repository}
+        }
+
+
+        \item{\textbf{ZeOS custom Linux Kernel}: 
+            \href{https://github.com/eZWALT/Advanced-Operating-Systems}{ZeOS UNIX Kernel}
+        }
+
+        }
+ \end{itemize}
+\end{multicols}
+
+%-------------------------------------------
+\end{document}

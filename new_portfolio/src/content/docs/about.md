@@ -17,13 +17,12 @@ This comprehensive guide explores the landscape of training and deploying large 
 
 ### Walter J. Troiani Vargas
 
-**Walter J.T.V**
-
 A passionate technologist and researcher exploring the frontiers of large language models, optimization, and scalable AI systems. This guide represents a curated collection of knowledge, best practices, and insights gathered from research, experimentation, and learning from the incredible AI community.
 
-**Connect:**
+**Connect & Learn More:**
 - [GitHub](https://github.com/eZWALT)
 - [LinkedIn](https://www.linkedin.com/in/walterjtv)
+- [View CV](/cv/)
 
 </div>
 </div>

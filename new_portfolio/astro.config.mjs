@@ -10,6 +10,7 @@ export default defineConfig({
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com' }],
 			sidebar: [
 				{ label: 'About', link: '/about/' },
+				{ label: 'CV', link: '/cv/' },
 				{
 					label: 'Scaling Laws',
 					items: [{ autogenerate: { directory: 'scaling-laws' } }],
