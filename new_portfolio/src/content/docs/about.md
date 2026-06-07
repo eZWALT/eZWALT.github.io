@@ -9,7 +9,11 @@ This comprehensive guide explores the landscape of training and deploying large 
 
 ## About the Creator
 
+<div style="display: grid; grid-template-columns: 180px 1fr; gap: 2rem; align-items: start;">
+
 ![Walter J.T.V](https://upload.wikimedia.org/wikipedia/en/0/03/Walter_White_S5B.png)
+
+<div>
 
 ### Walter J. Troiani Vargas
 
@@ -20,6 +24,9 @@ A passionate technologist and researcher exploring the frontiers of large langua
 **Connect:**
 - [GitHub](https://github.com/eZWALT)
 - [LinkedIn](https://www.linkedin.com/in/walterjtv)
+
+</div>
+</div>
 
 ### Featured Topics
 
