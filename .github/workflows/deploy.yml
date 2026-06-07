@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: '20'
 
-      - run: npm ci
+      - run: npm install
         working-directory: ./new_portfolio
       - run: npm run build
         working-directory: ./new_portfolio
