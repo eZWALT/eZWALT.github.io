@@ -11,7 +11,12 @@ export default defineConfig({
 			sidebar: [
 				{
 					label: 'Fundamentals',
-					items: [{ autogenerate: { directory: 'fundamentals' } }],
+					items: [
+						{ autogenerate: { directory: 'fundamentals' } },
+						{ label: 'Compression', items: [{ autogenerate: { directory: 'fundamentals/compression' } }] },
+						{ label: 'Tricks of the Trade', items: [{ autogenerate: { directory: 'fundamentals/tricks' } }] },
+						{ label: 'World Models', items: [{ autogenerate: { directory: 'fundamentals/world-models' } }] },
+					],
 				},
 				{
 					label: 'Pre-training',
