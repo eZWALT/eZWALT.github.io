@@ -12,12 +12,12 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '18'
-      - run: npm ci
-      - run: npm run build
+      - run: cd new_portfolio && npm ci
+      - run: cd new_portfolio && npm run build
       - uses: actions/upload-artifact@v4
         with:
           name: dist
-          path: dist/
+          path: new_portfolio/dist/
 
   deploy:
     needs: build
@@ -30,4 +30,4 @@ jobs:
       - uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          publish_dir: ./dist/
