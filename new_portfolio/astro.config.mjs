@@ -11,6 +11,7 @@ export default defineConfig({
 			sidebar: [
 				{ label: 'About', link: '/about/' },
 				{ label: 'CV', link: '/cv/' },
+				{ label: 'Blog', items: [{ autogenerate: { directory: 'blogs' } }] },
 				{
 					label: 'Scaling Laws',
 					items: [{ autogenerate: { directory: 'scaling-laws' } }],
