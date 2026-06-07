@@ -20,10 +20,12 @@ jobs:
           node-version: '22'
 
       - run: npm install
+        working-directory: ./new_portfolio
       - run: npm run build
+        working-directory: ./new_portfolio
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist/
+          path: ./new_portfolio/dist/
 
       - uses: actions/deploy-pages@v4
