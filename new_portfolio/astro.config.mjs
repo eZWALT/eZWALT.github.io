@@ -9,6 +9,7 @@ export default defineConfig({
 			title: 'The Scaling Journey',
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com' }],
 			sidebar: [
+				{ label: 'About', link: '/about/' },
 				{
 					label: 'Scaling Laws',
 					items: [{ autogenerate: { directory: 'scaling-laws' } }],
