@@ -10,13 +10,20 @@ export default defineConfig({
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com' }],
 			sidebar: [
 				{
-					label: 'Fundamentals',
-					items: [
-						{ autogenerate: { directory: 'fundamentals' } },
-						{ label: 'Compression', items: [{ autogenerate: { directory: 'fundamentals/compression' } }] },
-						{ label: 'Tricks of the Trade', items: [{ autogenerate: { directory: 'fundamentals/tricks' } }] },
-						{ label: 'World Models', items: [{ autogenerate: { directory: 'fundamentals/world-models' } }] },
-					],
+					label: 'Scaling Laws',
+					items: [{ autogenerate: { directory: 'scaling-laws' } }],
+				},
+				{
+					label: 'Transformers',
+					items: [{ autogenerate: { directory: 'transformers' } }],
+				},
+				{
+					label: 'Compression',
+					items: [{ autogenerate: { directory: 'compression' } }],
+				},
+				{
+					label: 'Retrieval & RAG',
+					items: [{ autogenerate: { directory: 'retrieval' } }],
 				},
 				{
 					label: 'Pre-training',
