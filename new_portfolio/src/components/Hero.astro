@@ -1,0 +1,72 @@
+---
+const { data } = Astro.locals.starlightRoute.entry;
+---
+
+<section class="manifesto">
+	<p class="manifesto__eyebrow">Walter J. Troiani Vargas</p>
+	<h1 id="_top">{data.hero?.title ?? data.title}</h1>
+	<p class="manifesto__lead">
+		Notes on training and serving models at scale — how they are built, how they run,
+		and what happens when the workload is a world rather than a sentence.
+	</p>
+	<p class="manifesto__body">
+		I come at this from compilers and clusters as much as from models.
+		<i>Troiani</i> is the from-scratch language-model family. The World Model Platform
+		is the system that is supposed to run the rest. Writing is the front door.
+	</p>
+	<ul class="manifesto__links">
+		<li><a href="/writing/">Writing</a></li>
+		<li><a href="/llms/troiani/">Troiani</a></li>
+		<li><a href="/ai-infra/world-model-platform/">Platform</a></li>
+		<li><a href="/me/about/">About</a></li>
+		<li><a href="https://thescalingjourney.substack.com/">Substack</a></li>
+	</ul>
+
+	<ul class="library">
+		<li>
+			<a href="/llms/">
+				<div class="library__key">01</div>
+				<div>
+					<div class="library__title">LLMs</div>
+					<div class="library__blurb">Architecture, scaling, training, compression. Troiani lives here.</div>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="/world-models/">
+				<div class="library__key">02</div>
+				<div>
+					<div class="library__title">World Models</div>
+					<div class="library__blurb">Prediction, planning, and the workloads that justify the platform.</div>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="/ai-infra/">
+				<div class="library__key">03</div>
+				<div>
+					<div class="library__title">AI Infra</div>
+					<div class="library__blurb">Rooflines, clusters, serving, kernels. How any of this actually runs.</div>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="/me/about/">
+				<div class="library__key">04</div>
+				<div>
+					<div class="library__title">Me</div>
+					<div class="library__blurb">About, CV, work, and the old Windows box.</div>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="/writing/essays/first-post/">
+				<div class="library__key">Essay</div>
+				<div>
+					<div class="library__title">Getting Started with The Scaling Journey</div>
+					<div class="library__blurb">The first post. Canonical copy lives here, then Substack.</div>
+				</div>
+			</a>
+		</li>
+	</ul>
+</section>

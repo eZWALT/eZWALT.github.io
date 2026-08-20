@@ -18,6 +18,8 @@ export default defineConfig({
 			customCss: ['./src/styles/theme.css'],
 			components: {
 				Head: './src/components/Head.astro',
+				Hero: './src/components/Hero.astro',
+				SiteTitle: './src/components/SiteTitle.astro',
 			},
 			expressiveCode: {
 				themes: ['github-light', 'github-dark'],
