@@ -1,6 +1,6 @@
 ---
-title: About This Guide
-description: Meet the creator and learn about The Scaling Journey
+title: About
+description: Walter J. Troiani Vargas
 ---
 
 ## The Scaling Journey
@@ -22,18 +22,17 @@ A passionate technologist and researcher exploring the frontiers of large langua
 **Connect & Learn More:**
 - [GitHub](https://github.com/eZWALT)
 - [LinkedIn](https://www.linkedin.com/in/walterjtv)
-- [View CV](/cv/)
+- [View CV](/me/cv/)
 
 </div>
 </div>
 
-### Featured Topics
+### What this site covers
 
-- **Scaling Laws** — Understanding the predictable relationships between model size, data, and compute
-- **Transformers** — Modern architectures and attention mechanisms that power LLMs
-- **Compression** — Making models efficient without sacrificing performance
-- **Retrieval & RAG** — Grounding language models with external knowledge
-- **Training & Optimization** — From pre-training to fine-tuning to deployment
+- **[LLMs](/llms/)** — architecture, scaling, training, compression. **[Troiani](/llms/troiani/)** is the from-scratch build.
+- **[World Models](/world-models/)** — prediction, planning, and evaluation
+- **[AI Infra](/ai-infra/)** — clusters, inference systems, kernels, the World Model Platform
+- **[Writing](/writing/)** — essays and lab notes
 
 ## Why This Guide?
 

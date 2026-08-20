@@ -1,6 +1,6 @@
 ---
 title: Deployment
-description: Model deployment strategies
+description: Rollout, serving paths, and production cutover
 ---
 
 ## Deployment
