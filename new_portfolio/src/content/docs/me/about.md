@@ -3,52 +3,24 @@ title: About
 description: Walter J. Troiani Vargas
 ---
 
-## The Scaling Journey
-
-This comprehensive guide explores the landscape of training and deploying large language models at scale. From fundamental principles to cutting-edge techniques, we dive deep into what makes modern LLMs work.
-
-## About the Creator
-
-<div style="display: grid; grid-template-columns: 180px 1fr; gap: 2rem; align-items: start;">
+<div style="display: grid; grid-template-columns: minmax(140px, 180px) 1fr; gap: 2rem; align-items: start;">
 
 ![Walter J.T.V](https://upload.wikimedia.org/wikipedia/en/0/03/Walter_White_S5B.png)
 
 <div>
 
-### Walter J. Troiani Vargas
+**Walter J. Troiani Vargas** — computer and data scientist. I care about language models, world models, and the infrastructure that makes them cheap enough to iterate on.
 
-A passionate technologist and researcher exploring the frontiers of large language models, optimization, and scalable AI systems. This guide represents a curated collection of knowledge, best practices, and insights gathered from research, experimentation, and learning from the incredible AI community.
+I have worked on LLVM / OpenMP at BSC, research computing at CERN, and GPU platforms at Multiverse. On the side I am building [Troiani](/llms/troiani/), an open sub-billion model family from scratch, and a [World Model Platform](/ai-infra/world-model-platform/) that is supposed to run a full train–serve loop.
 
-**Connect & Learn More:**
 - [GitHub](https://github.com/eZWALT)
 - [LinkedIn](https://www.linkedin.com/in/walterjtv)
-- [View CV](/me/cv/)
+- [CV](/me/cv/)
+- [Substack](https://thescalingjourney.substack.com/)
 
 </div>
 </div>
 
-### What this site covers
+This site is the notebook: [writing](/writing/) first, then a library of [LLMs](/llms/), [world models](/world-models/), and [AI infra](/ai-infra/).
 
-- **[LLMs](/llms/)** — architecture, scaling, training, compression. **[Troiani](/llms/troiani/)** is the from-scratch build.
-- **[World Models](/world-models/)** — prediction, planning, and evaluation
-- **[AI Infra](/ai-infra/)** — clusters, inference systems, kernels, the World Model Platform
-- **[Writing](/writing/)** — essays and lab notes
-
-## Why This Guide?
-
-The field of large language models is moving at an incredible pace. This guide aims to provide:
-
-- **Structured learning** — Organized from fundamentals to advanced topics
-- **Practical insights** — Real techniques used in production systems
-- **Current perspectives** — Covering recent advances and best practices
-- **Community knowledge** — Standing on the shoulders of giants in the ML community
-
----
-
-**Last Updated:** June 2026
-
-For questions, ideas, or feedback, feel free to reach out or explore the documentation!
-
----
-
-*P.S. — Curious about the previous version? Check out [the old portfolio](/old/) — a nostalgic journey through earlier iterations.*
+The previous version is still up — a [Windows 2002 desktop](/old/).
