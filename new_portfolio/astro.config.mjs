@@ -14,12 +14,37 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'The Scaling Journey',
+			favicon: '/favicon.svg',
+			customCss: ['./src/styles/theme.css'],
+			components: {
+				Head: './src/components/Head.astro',
+			},
+			expressiveCode: {
+				themes: ['github-light', 'github-dark'],
+			},
+			head: [
+				{
+					tag: 'meta',
+					attrs: { property: 'og:image', content: 'https://ezwalt.github.io/og.png' },
+				},
+				{
+					tag: 'meta',
+					attrs: { name: 'twitter:card', content: 'summary_large_image' },
+				},
+				{
+					tag: 'meta',
+					attrs: { name: 'twitter:image', content: 'https://ezwalt.github.io/og.png' },
+				},
+			],
 			social: [
 				{ icon: 'github', label: 'GitHub', href: 'https://github.com/eZWALT' },
+				{ icon: 'linkedin', label: 'LinkedIn', href: 'https://www.linkedin.com/in/walterjtv' },
+				{ icon: 'email', label: 'Substack', href: 'https://thescalingjourney.substack.com/' },
 			],
 			sidebar: [
 				{
 					label: 'Writing',
+					collapsed: true,
 					items: [
 						{ label: 'Overview', link: '/writing/' },
 						{
@@ -34,6 +59,7 @@ export default defineConfig({
 				},
 				{
 					label: 'LLMs',
+					collapsed: true,
 					items: [
 						{ label: 'Overview', link: '/llms/' },
 						{ label: 'Troiani', link: '/llms/troiani/' },
@@ -71,6 +97,7 @@ export default defineConfig({
 				},
 				{
 					label: 'World Models',
+					collapsed: true,
 					items: [
 						{ label: 'Overview', link: '/world-models/' },
 						{ label: 'Foundations', link: '/world-models/foundations/' },
@@ -86,6 +113,7 @@ export default defineConfig({
 				},
 				{
 					label: 'AI Infra',
+					collapsed: true,
 					items: [
 						{ label: 'Overview', link: '/ai-infra/' },
 						{ label: 'Performance', link: '/ai-infra/performance/' },
