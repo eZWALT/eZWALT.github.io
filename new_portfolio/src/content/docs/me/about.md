@@ -21,6 +21,6 @@ I have worked on LLVM / OpenMP at BSC, research computing at CERN, and GPU platf
 </div>
 </div>
 
-This site is the notebook: [writing](/writing/) first, then a library of [LLMs](/llms/), [world models](/world-models/), and [AI infra](/ai-infra/).
+This site is the notebook: [writing](/writing/) first, then a library of [LLMs](/llms/), [world models](/world-models/), [AI infra](/ai-infra/), and [harness](/harness/).
 
 The previous version is still up — a [Windows 2002 desktop](/old/).

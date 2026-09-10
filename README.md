@@ -17,6 +17,7 @@ writing/       essays and lab notes
 llms/          architecture, scaling, training, Troiani
 world-models/  prediction, workloads, evaluation
 ai-infra/      performance, clusters, serving, platform
+harness/       agents, evaluation, advertising, incentives
 me/            about, CV, work, projects
 ```
 

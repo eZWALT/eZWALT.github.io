@@ -129,6 +129,17 @@ export default defineConfig({
 					],
 				},
 				{
+					label: 'Harness',
+					collapsed: true,
+					items: [
+						{ label: 'Overview', link: '/harness/' },
+						{
+							label: 'Advertisement',
+							items: [{ autogenerate: { directory: 'harness/advertisement' } }],
+						},
+					],
+				},
+				{
 					label: 'Me',
 					items: [
 						{ label: 'About', link: '/me/about/' },
