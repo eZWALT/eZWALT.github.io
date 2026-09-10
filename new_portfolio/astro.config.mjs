@@ -64,7 +64,10 @@ export default defineConfig({
 					collapsed: true,
 					items: [
 						{ label: 'Overview', link: '/llms/' },
-						{ label: 'Troiani', link: '/llms/troiani/' },
+						{
+							label: 'Troiani',
+							items: [{ label: 'Overview', link: '/llms/troiani/' }],
+						},
 						{
 							label: 'Architecture',
 							collapsed: true,
@@ -135,7 +138,18 @@ export default defineConfig({
 						{ label: 'Overview', link: '/harness/' },
 						{
 							label: 'Advertisement',
-							items: [{ autogenerate: { directory: 'harness/advertisement' } }],
+							items: [
+								{ label: 'Overview', link: '/harness/advertisement/' },
+								{
+									label: 'Notes',
+									items: [
+										{
+											label: 'Advertisement in LLMs (1)',
+											link: '/harness/advertisement/advertisement-in-llms-1/',
+										},
+									],
+								},
+							],
 						},
 					],
 				},
