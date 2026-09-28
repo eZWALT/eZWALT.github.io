@@ -1,15 +1,12 @@
 ---
-title: Advertisement in LLMs (1)
-description: First note on advertising inside and around language-model interactions
+title: The Price of Attention
+description: Master's thesis on behavioural and EEG responses to advertising in LLM conversations
 ---
 
-First note in the [LLM Advertising](/harness/advertisement/) series.
+Master's thesis, Università degli Studi di Padova, academic year 2024–2026. Supervisor Michele Rossi. Co-supervisor Ioannis Arapakis (Universitat Pompeu Fabra, Telefónica).
 
-Placeholder. The questions this note will take up:
+Advertising inside a conversation is paid for by the user, in attention, trust, and experience. The thesis asks when that cost shows up, how large it is, and whether the way the ad enters changes it: an implicit mention or an explicit banner, early or late, against an ad-free control. Fifty-four people, eighteen of them with 32-channel EEG.
 
-- What counts as an advertisement when the surface is a chat, a tool call, or a retrieved snippet?
-- How should serving policy differ from web display ads?
-- How do you tell user intent from induced intent?
-- What is worth measuring besides click-through?
+<iframe src="/the-price-of-attention.pdf" width="100%" height="1400px" style="border: none; border-radius: 8px; margin: 2rem 0;"></iframe>
 
-More notes will sit next to this one. The project landing stays at [LLM Advertising](/harness/advertisement/).
+**Full document not displaying?** [Download the PDF](/the-price-of-attention.pdf)

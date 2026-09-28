@@ -144,7 +144,7 @@ export default defineConfig({
 									label: 'Notes',
 									items: [
 										{
-											label: 'Advertisement in LLMs (1)',
+											label: 'The Price of Attention',
 											link: '/harness/advertisement/advertisement-in-llms-1/',
 										},
 									],

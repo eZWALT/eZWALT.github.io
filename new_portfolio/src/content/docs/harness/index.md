@@ -7,7 +7,7 @@ The layer around the model, not the model itself: agents, evaluation, tool use, 
 
 **AI Infra** is how models are trained and served. **Harness** is how they are steered, measured, and made to act.
 
-The first project here is **[LLM Advertising](/harness/advertisement/)** — advertising inside and around LLM interactions.
+The first project here is **[LLM Advertising](/harness/advertisement/)**. The thesis is **[The Price of Attention](/harness/advertisement/advertisement-in-llms-1/)**.
 
 Later shelves (not started):
 
