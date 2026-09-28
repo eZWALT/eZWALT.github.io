@@ -377,6 +377,28 @@ starlight-menu-button button {
 	border-radius: 2px;
 }
 
+/*
+ * Starlight sets iframe { height: auto }, which collapses a PDF viewer
+ * to a thin strip. A column-width frame about one screen tall shows a page.
+ */
+.sl-markdown-content iframe {
+	display: block;
+	width: 100%;
+	height: calc(100dvh - 4.5rem);
+	min-height: 40rem;
+	margin: 0.75rem 0 0;
+	border: 1px solid var(--hair);
+	border-radius: 2px;
+	background: #fff;
+}
+
+/* Thesis reader: use the space beside the nav, not the narrow prose measure. */
+@media (min-width: 50rem) {
+	.content-panel:has(iframe[title='The Price of Attention']) .sl-container {
+		max-width: min(64rem, calc(100vw - var(--sl-sidebar-width) - 4rem));
+	}
+}
+
 /* Pagination / footer quieter */
 .pagination-links a {
 	border: none;
