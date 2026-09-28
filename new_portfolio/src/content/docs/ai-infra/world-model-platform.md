@@ -11,4 +11,4 @@ collect → validate → train → evaluate → register → serve → observe �
 
 The workload is a world model. The systems questions are general. Source and architecture live in the [AI Infrastructure repo](https://github.com/eZWALT/AI-Infrastructure).
 
-Notes coming.
+WIP.
